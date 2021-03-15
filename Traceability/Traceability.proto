@@ -1,0 +1,44 @@
+syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
+
+package Traceability;
+
+//ipfs表
+
+message IpfsTable{
+    string ipfskey         = 1; //key值唯一
+    string ipfshash        = 2;
+    string orgNo           = 3;
+    string productBatchNo  = 4;
+    string productCode     = 5;
+    string submitTime      = 6;
+}
+
+message ProductTable{
+    string productkey      = 1; //key值唯一
+    string account         = 2;
+    string address         = 3;
+    string batchNo         = 4;
+    string confirm         = 5;
+    string createTime      = 6;
+    string id              = 7;
+    string key             = 8;
+    string lat             = 9;
+    string lng             = 10;
+    string orgId           = 11;
+    string picHash         = 12;
+    string picture         = 13;
+    string roleId          = 14;
+    string roleName        = 15;
+    string status          = 16;
+    string submitTime      = 17;
+    string transactionId   = 18;
+    string type            = 19;
+    string updateTime      = 20;
+    string uploadTimes     = 21;
+    string userId          = 22;
+    string userName        = 23;
+    string userUUID        = 24;
+    string work            = 25;
+
+}
