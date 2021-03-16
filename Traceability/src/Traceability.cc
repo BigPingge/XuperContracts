@@ -180,7 +180,7 @@ void Tracebility::queryProductTable(){
     const std::string key =  ctx->arg("key");
 
     if(ctx->arg("key").empty()){
-            ctx->error("arg(key) cannot be empty");
+        ctx->error("arg(key) cannot be empty");
         return;
     }
 
@@ -191,6 +191,30 @@ void Tracebility::queryProductTable(){
     }
     
     ctx->ok(table.to_string());
+}
+
+void Tracebility::qureyIpfsByorgNo(){
+    xchain::Context* ctx = this->context();
+    const std::string orgNo =  ctx->arg("orgNo");
+
+    if(orgNo.empty()){
+        ctx->error("arg(orgNo) cannot be empty");
+        return;
+    }
+
+    auto it = get_ipfs_table().scan({{"orgno",orgNo}});
+    string str;
+    while(it->next()){
+        ipfstable table;
+        if(!it->get(&table)){
+            if(it->error(true) == "success") 
+                return ;
+            ctx->error("ipfs table get failure ");
+            return ;
+        }
+        str += table.to_string();
+    }
+    ctx->ok(str);
 }
 
 DEFINE_METHOD(Tracebility,initialize){
@@ -211,4 +235,8 @@ DEFINE_METHOD(Tracebility,queryProductTable){
 
 DEFINE_METHOD(Tracebility,queryIpfsInfo){
     self.queryIpfsInfo();
+}
+
+DEFINE_METHOD(Tracebility,qureyIpfsByorgNo){
+    self.qureyIpfsByorgNo();
 }

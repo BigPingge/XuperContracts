@@ -44,6 +44,10 @@ public:
 
     //通过key查询Product表内容
     void queryProductTable();
+
+   
+    //测试一个字段orgNo能否查到整条信息
+    void qureyIpfsByorgNo();
 private:
     //其他函数，仅供内部调用
     bool is_ipfs_exit(const string &, ipfstable &);
