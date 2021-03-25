@@ -17,7 +17,9 @@ class ipfstable : public Traceability :: IpfsTable {
         DEFINE_INDEX_ADD(4, submittime)
     DEFINE_INDEX_END();
 
-    string to_string();
+    string to_string(); //转string
+    string to_json();  //转json
+
 };
 
 #endif //_IPFSTABLE_H_

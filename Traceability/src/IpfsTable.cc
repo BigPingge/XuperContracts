@@ -11,3 +11,15 @@ string ipfstable::to_string(){
     str += "}";
     return str;
 }
+
+string ipfstable::to_json(){
+    string str;
+    xchain::json j = {
+        {"ipfshash", ipfshash()},
+        {"orgNo", orgno()},
+        {"productBatchNo", productbatchno()},
+        {"productCode", productcode()},
+        {"submitTime", submittime()},
+    };
+    return str;
+}

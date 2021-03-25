@@ -202,6 +202,7 @@ void Tracebility::qureyIpfsByorgNo(){
         return;
     }
 
+    xchain::json xjson;
     auto it = get_ipfs_table().scan({{"orgno",orgNo}});
     string str;
     while(it->next()){
@@ -212,9 +213,9 @@ void Tracebility::qureyIpfsByorgNo(){
             ctx->error("ipfs table get failure ");
             return ;
         }
-        str += table.to_string();
+        xjson.push_back(table.to_json())
     }
-    ctx->ok(str);
+    ctx->ok(xjson.dump());
 }
 
 DEFINE_METHOD(Tracebility,initialize){
