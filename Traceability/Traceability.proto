@@ -7,11 +7,10 @@ package Traceability;
 
 message IpfsTable{
     string ipfskey         = 1; //key值唯一
-    string ipfshash        = 2;
-    string orgNo           = 3;
-    string productBatchNo  = 4;
-    string productCode     = 5;
-    string submitTime      = 6;
+    string orgNo           = 2;
+    string productBatchNo  = 3;
+    string productCode     = 4;
+    string submitTime      = 5;
 }
 
 message ProductTable{

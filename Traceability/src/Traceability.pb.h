@@ -169,23 +169,9 @@ class IpfsTable :
   ::std::string* release_ipfskey();
   void set_allocated_ipfskey(::std::string* ipfskey);
 
-  // string ipfshash = 2;
-  void clear_ipfshash();
-  static const int kIpfshashFieldNumber = 2;
-  const ::std::string& ipfshash() const;
-  void set_ipfshash(const ::std::string& value);
-  #if LANG_CXX11
-  void set_ipfshash(::std::string&& value);
-  #endif
-  void set_ipfshash(const char* value);
-  void set_ipfshash(const char* value, size_t size);
-  ::std::string* mutable_ipfshash();
-  ::std::string* release_ipfshash();
-  void set_allocated_ipfshash(::std::string* ipfshash);
-
-  // string orgNo = 3;
+  // string orgNo = 2;
   void clear_orgno();
-  static const int kOrgNoFieldNumber = 3;
+  static const int kOrgNoFieldNumber = 2;
   const ::std::string& orgno() const;
   void set_orgno(const ::std::string& value);
   #if LANG_CXX11
@@ -197,9 +183,9 @@ class IpfsTable :
   ::std::string* release_orgno();
   void set_allocated_orgno(::std::string* orgno);
 
-  // string productBatchNo = 4;
+  // string productBatchNo = 3;
   void clear_productbatchno();
-  static const int kProductBatchNoFieldNumber = 4;
+  static const int kProductBatchNoFieldNumber = 3;
   const ::std::string& productbatchno() const;
   void set_productbatchno(const ::std::string& value);
   #if LANG_CXX11
@@ -211,9 +197,9 @@ class IpfsTable :
   ::std::string* release_productbatchno();
   void set_allocated_productbatchno(::std::string* productbatchno);
 
-  // string productCode = 5;
+  // string productCode = 4;
   void clear_productcode();
-  static const int kProductCodeFieldNumber = 5;
+  static const int kProductCodeFieldNumber = 4;
   const ::std::string& productcode() const;
   void set_productcode(const ::std::string& value);
   #if LANG_CXX11
@@ -225,9 +211,9 @@ class IpfsTable :
   ::std::string* release_productcode();
   void set_allocated_productcode(::std::string* productcode);
 
-  // string submitTime = 6;
+  // string submitTime = 5;
   void clear_submittime();
-  static const int kSubmitTimeFieldNumber = 6;
+  static const int kSubmitTimeFieldNumber = 5;
   const ::std::string& submittime() const;
   void set_submittime(const ::std::string& value);
   #if LANG_CXX11
@@ -245,7 +231,6 @@ class IpfsTable :
 
   ::google::protobuf::internal::InternalMetadataWithArenaLite _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr ipfskey_;
-  ::google::protobuf::internal::ArenaStringPtr ipfshash_;
   ::google::protobuf::internal::ArenaStringPtr orgno_;
   ::google::protobuf::internal::ArenaStringPtr productbatchno_;
   ::google::protobuf::internal::ArenaStringPtr productcode_;
@@ -793,60 +778,7 @@ inline void IpfsTable::set_allocated_ipfskey(::std::string* ipfskey) {
   // @@protoc_insertion_point(field_set_allocated:Traceability.IpfsTable.ipfskey)
 }
 
-// string ipfshash = 2;
-inline void IpfsTable::clear_ipfshash() {
-  ipfshash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& IpfsTable::ipfshash() const {
-  // @@protoc_insertion_point(field_get:Traceability.IpfsTable.ipfshash)
-  return ipfshash_.GetNoArena();
-}
-inline void IpfsTable::set_ipfshash(const ::std::string& value) {
-  
-  ipfshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.IpfsTable.ipfshash)
-}
-#if LANG_CXX11
-inline void IpfsTable::set_ipfshash(::std::string&& value) {
-  
-  ipfshash_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.IpfsTable.ipfshash)
-}
-#endif
-inline void IpfsTable::set_ipfshash(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  ipfshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.IpfsTable.ipfshash)
-}
-inline void IpfsTable::set_ipfshash(const char* value, size_t size) {
-  
-  ipfshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.IpfsTable.ipfshash)
-}
-inline ::std::string* IpfsTable::mutable_ipfshash() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.IpfsTable.ipfshash)
-  return ipfshash_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* IpfsTable::release_ipfshash() {
-  // @@protoc_insertion_point(field_release:Traceability.IpfsTable.ipfshash)
-  
-  return ipfshash_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void IpfsTable::set_allocated_ipfshash(::std::string* ipfshash) {
-  if (ipfshash != nullptr) {
-    
-  } else {
-    
-  }
-  ipfshash_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ipfshash);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.IpfsTable.ipfshash)
-}
-
-// string orgNo = 3;
+// string orgNo = 2;
 inline void IpfsTable::clear_orgno() {
   orgno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -899,7 +831,7 @@ inline void IpfsTable::set_allocated_orgno(::std::string* orgno) {
   // @@protoc_insertion_point(field_set_allocated:Traceability.IpfsTable.orgNo)
 }
 
-// string productBatchNo = 4;
+// string productBatchNo = 3;
 inline void IpfsTable::clear_productbatchno() {
   productbatchno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -952,7 +884,7 @@ inline void IpfsTable::set_allocated_productbatchno(::std::string* productbatchn
   // @@protoc_insertion_point(field_set_allocated:Traceability.IpfsTable.productBatchNo)
 }
 
-// string productCode = 5;
+// string productCode = 4;
 inline void IpfsTable::clear_productcode() {
   productcode_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1005,7 +937,7 @@ inline void IpfsTable::set_allocated_productcode(::std::string* productcode) {
   // @@protoc_insertion_point(field_set_allocated:Traceability.IpfsTable.productCode)
 }
 
-// string submitTime = 6;
+// string submitTime = 5;
 inline void IpfsTable::clear_submittime() {
   submittime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }

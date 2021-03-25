@@ -63,7 +63,6 @@ class IpfsTable::HasBitSetters {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int IpfsTable::kIpfskeyFieldNumber;
-const int IpfsTable::kIpfshashFieldNumber;
 const int IpfsTable::kOrgNoFieldNumber;
 const int IpfsTable::kProductBatchNoFieldNumber;
 const int IpfsTable::kProductCodeFieldNumber;
@@ -82,10 +81,6 @@ IpfsTable::IpfsTable(const IpfsTable& from)
   ipfskey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.ipfskey().size() > 0) {
     ipfskey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ipfskey_);
-  }
-  ipfshash_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.ipfshash().size() > 0) {
-    ipfshash_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ipfshash_);
   }
   orgno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.orgno().size() > 0) {
@@ -110,7 +105,6 @@ void IpfsTable::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_IpfsTable_Traceability_2eproto.base);
   ipfskey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ipfshash_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   orgno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   productbatchno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   productcode_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -124,7 +118,6 @@ IpfsTable::~IpfsTable() {
 
 void IpfsTable::SharedDtor() {
   ipfskey_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ipfshash_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   orgno_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   productbatchno_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   productcode_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -147,7 +140,6 @@ void IpfsTable::Clear() {
   (void) cached_has_bits;
 
   ipfskey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ipfshash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   orgno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   productbatchno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   productcode_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -184,25 +176,9 @@ const char* IpfsTable::_InternalParse(const char* begin, const char* end, void* 
         ptr += size;
         break;
       }
-      // string ipfshash = 2;
+      // string orgNo = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_ipfshash();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string orgNo = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -216,9 +192,9 @@ const char* IpfsTable::_InternalParse(const char* begin, const char* end, void* 
         ptr += size;
         break;
       }
-      // string productBatchNo = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+      // string productBatchNo = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -232,9 +208,9 @@ const char* IpfsTable::_InternalParse(const char* begin, const char* end, void* 
         ptr += size;
         break;
       }
-      // string productCode = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+      // string productCode = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -248,9 +224,9 @@ const char* IpfsTable::_InternalParse(const char* begin, const char* end, void* 
         ptr += size;
         break;
       }
-      // string submitTime = 6;
-      case 6: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+      // string submitTime = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -319,24 +295,9 @@ bool IpfsTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string ipfshash = 2;
+      // string orgNo = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_ipfshash()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->ipfshash().data(), static_cast<int>(this->ipfshash().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.IpfsTable.ipfshash"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string orgNo = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_orgno()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -349,9 +310,9 @@ bool IpfsTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string productBatchNo = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+      // string productBatchNo = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_productbatchno()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -364,9 +325,9 @@ bool IpfsTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string productCode = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+      // string productCode = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_productcode()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -379,9 +340,9 @@ bool IpfsTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string submitTime = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+      // string submitTime = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_submittime()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -431,54 +392,44 @@ void IpfsTable::SerializeWithCachedSizes(
       1, this->ipfskey(), output);
   }
 
-  // string ipfshash = 2;
-  if (this->ipfshash().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->ipfshash().data(), static_cast<int>(this->ipfshash().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.IpfsTable.ipfshash");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->ipfshash(), output);
-  }
-
-  // string orgNo = 3;
+  // string orgNo = 2;
   if (this->orgno().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->orgno().data(), static_cast<int>(this->orgno().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.IpfsTable.orgNo");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->orgno(), output);
+      2, this->orgno(), output);
   }
 
-  // string productBatchNo = 4;
+  // string productBatchNo = 3;
   if (this->productbatchno().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->productbatchno().data(), static_cast<int>(this->productbatchno().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.IpfsTable.productBatchNo");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->productbatchno(), output);
+      3, this->productbatchno(), output);
   }
 
-  // string productCode = 5;
+  // string productCode = 4;
   if (this->productcode().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->productcode().data(), static_cast<int>(this->productcode().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.IpfsTable.productCode");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->productcode(), output);
+      4, this->productcode(), output);
   }
 
-  // string submitTime = 6;
+  // string submitTime = 5;
   if (this->submittime().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->submittime().data(), static_cast<int>(this->submittime().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.IpfsTable.submitTime");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->submittime(), output);
+      5, this->submittime(), output);
   }
 
   output->WriteRaw(_internal_metadata_.unknown_fields().data(),
@@ -503,35 +454,28 @@ size_t IpfsTable::ByteSizeLong() const {
         this->ipfskey());
   }
 
-  // string ipfshash = 2;
-  if (this->ipfshash().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->ipfshash());
-  }
-
-  // string orgNo = 3;
+  // string orgNo = 2;
   if (this->orgno().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->orgno());
   }
 
-  // string productBatchNo = 4;
+  // string productBatchNo = 3;
   if (this->productbatchno().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->productbatchno());
   }
 
-  // string productCode = 5;
+  // string productCode = 4;
   if (this->productcode().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->productcode());
   }
 
-  // string submitTime = 6;
+  // string submitTime = 5;
   if (this->submittime().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -558,10 +502,6 @@ void IpfsTable::MergeFrom(const IpfsTable& from) {
   if (from.ipfskey().size() > 0) {
 
     ipfskey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ipfskey_);
-  }
-  if (from.ipfshash().size() > 0) {
-
-    ipfshash_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ipfshash_);
   }
   if (from.orgno().size() > 0) {
 
@@ -600,8 +540,6 @@ void IpfsTable::InternalSwap(IpfsTable* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   ipfskey_.Swap(&other->ipfskey_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  ipfshash_.Swap(&other->ipfshash_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   orgno_.Swap(&other->orgno_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());

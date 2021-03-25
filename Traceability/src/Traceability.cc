@@ -40,13 +40,12 @@ void Tracebility::initialize(){
 void Tracebility::storeIpfsInfo(){
     xchain::Context* ctx = this->context(); 
 
-    std::string ipfshash = ctx->arg("ipfshash");
     std::string orgNo = ctx->arg("orgNo");
     std::string productBatchNo = ctx->arg("productBatchNo");
     std::string productCode = ctx->arg("productCode");
     std::string submitTime = ctx->arg("submitTime");
 
-    if (ipfshash.empty() || orgNo.empty() || productBatchNo.empty() || productCode.empty() || submitTime.empty()) {
+    if (orgNo.empty() || productBatchNo.empty() || productCode.empty() || submitTime.empty()) {
         ctx->error("some args are missing");
         return;
     }
@@ -62,7 +61,6 @@ void Tracebility::storeIpfsInfo(){
         return;
     }
     table.set_ipfskey(IpfsKey);
-    table.set_ipfshash(ipfshash);
     table.set_orgno(orgNo);
     table.set_productbatchno(productBatchNo);
     table.set_productcode(productCode);
