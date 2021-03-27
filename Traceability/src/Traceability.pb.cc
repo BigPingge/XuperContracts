@@ -565,31 +565,22 @@ class ProductTable::HasBitSetters {
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ProductTable::kProductkeyFieldNumber;
-const int ProductTable::kAccountFieldNumber;
+const int ProductTable::kOrgNoFieldNumber;
+const int ProductTable::kProductBatchNoFieldNumber;
+const int ProductTable::kFilesHashFieldNumber;
+const int ProductTable::kFileTypeFieldNumber;
 const int ProductTable::kAddressFieldNumber;
-const int ProductTable::kBatchNoFieldNumber;
-const int ProductTable::kConfirmFieldNumber;
-const int ProductTable::kCreateTimeFieldNumber;
-const int ProductTable::kIdFieldNumber;
-const int ProductTable::kKeyFieldNumber;
 const int ProductTable::kLatFieldNumber;
 const int ProductTable::kLngFieldNumber;
-const int ProductTable::kOrgIdFieldNumber;
-const int ProductTable::kPicHashFieldNumber;
-const int ProductTable::kPictureFieldNumber;
-const int ProductTable::kRoleIdFieldNumber;
-const int ProductTable::kRoleNameFieldNumber;
-const int ProductTable::kStatusFieldNumber;
-const int ProductTable::kSubmitTimeFieldNumber;
-const int ProductTable::kTransactionIdFieldNumber;
-const int ProductTable::kTypeFieldNumber;
+const int ProductTable::kCreateTimeFieldNumber;
 const int ProductTable::kUpdateTimeFieldNumber;
-const int ProductTable::kUploadTimesFieldNumber;
-const int ProductTable::kUserIdFieldNumber;
-const int ProductTable::kUserNameFieldNumber;
-const int ProductTable::kUserUUIDFieldNumber;
-const int ProductTable::kWorkFieldNumber;
+const int ProductTable::kPinfoRecordIdFieldNumber;
+const int ProductTable::kPaccountFieldNumber;
+const int ProductTable::kPuserIdFieldNumber;
+const int ProductTable::kProleNameFieldNumber;
+const int ProductTable::kPremarkFieldNumber;
+const int ProductTable::kProleIdFieldNumber;
+const int ProductTable::kPuserNameFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ProductTable::ProductTable()
@@ -601,37 +592,25 @@ ProductTable::ProductTable(const ProductTable& from)
   : ::google::protobuf::MessageLite(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  productkey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.productkey().size() > 0) {
-    productkey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.productkey_);
+  orgno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.orgno().size() > 0) {
+    orgno_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.orgno_);
   }
-  account_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.account().size() > 0) {
-    account_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_);
+  productbatchno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.productbatchno().size() > 0) {
+    productbatchno_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.productbatchno_);
+  }
+  fileshash_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.fileshash().size() > 0) {
+    fileshash_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.fileshash_);
+  }
+  filetype_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filetype().size() > 0) {
+    filetype_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filetype_);
   }
   address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.address().size() > 0) {
     address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.address_);
-  }
-  batchno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.batchno().size() > 0) {
-    batchno_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.batchno_);
-  }
-  confirm_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.confirm().size() > 0) {
-    confirm_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.confirm_);
-  }
-  createtime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.createtime().size() > 0) {
-    createtime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.createtime_);
-  }
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.id().size() > 0) {
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-  key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.key().size() > 0) {
-    key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.key_);
   }
   lat_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.lat().size() > 0) {
@@ -641,65 +620,41 @@ ProductTable::ProductTable(const ProductTable& from)
   if (from.lng().size() > 0) {
     lng_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lng_);
   }
-  orgid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.orgid().size() > 0) {
-    orgid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.orgid_);
-  }
-  pichash_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.pichash().size() > 0) {
-    pichash_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pichash_);
-  }
-  picture_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.picture().size() > 0) {
-    picture_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.picture_);
-  }
-  roleid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.roleid().size() > 0) {
-    roleid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.roleid_);
-  }
-  rolename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.rolename().size() > 0) {
-    rolename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.rolename_);
-  }
-  status_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.status().size() > 0) {
-    status_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.status_);
-  }
-  submittime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.submittime().size() > 0) {
-    submittime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.submittime_);
-  }
-  transactionid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.transactionid().size() > 0) {
-    transactionid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.transactionid_);
-  }
-  type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.type().size() > 0) {
-    type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.type_);
+  createtime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.createtime().size() > 0) {
+    createtime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.createtime_);
   }
   updatetime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.updatetime().size() > 0) {
     updatetime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.updatetime_);
   }
-  uploadtimes_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.uploadtimes().size() > 0) {
-    uploadtimes_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uploadtimes_);
+  pinforecordid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.pinforecordid().size() > 0) {
+    pinforecordid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pinforecordid_);
   }
-  userid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.userid().size() > 0) {
-    userid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.userid_);
+  paccount_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.paccount().size() > 0) {
+    paccount_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.paccount_);
   }
-  username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.username().size() > 0) {
-    username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
+  puserid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.puserid().size() > 0) {
+    puserid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.puserid_);
   }
-  useruuid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.useruuid().size() > 0) {
-    useruuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.useruuid_);
+  prolename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.prolename().size() > 0) {
+    prolename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.prolename_);
   }
-  work_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.work().size() > 0) {
-    work_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.work_);
+  premark_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.premark().size() > 0) {
+    premark_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.premark_);
+  }
+  proleid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.proleid().size() > 0) {
+    proleid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.proleid_);
+  }
+  pusername_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.pusername().size() > 0) {
+    pusername_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pusername_);
   }
   // @@protoc_insertion_point(copy_constructor:Traceability.ProductTable)
 }
@@ -707,31 +662,22 @@ ProductTable::ProductTable(const ProductTable& from)
 void ProductTable::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_ProductTable_Traceability_2eproto.base);
-  productkey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  account_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  orgno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  productbatchno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  fileshash_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filetype_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  batchno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  confirm_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  createtime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   lat_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   lng_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  orgid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  pichash_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  picture_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  roleid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  rolename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  status_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  submittime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  transactionid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  createtime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   updatetime_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uploadtimes_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  userid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  useruuid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  work_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pinforecordid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  paccount_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  puserid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  prolename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  premark_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  proleid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pusername_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 ProductTable::~ProductTable() {
@@ -740,31 +686,22 @@ ProductTable::~ProductTable() {
 }
 
 void ProductTable::SharedDtor() {
-  productkey_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  account_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  orgno_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  productbatchno_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  fileshash_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filetype_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   address_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  batchno_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  confirm_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  createtime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  key_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   lat_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   lng_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  orgid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  pichash_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  picture_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  roleid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  rolename_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  status_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  submittime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  transactionid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  createtime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   updatetime_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uploadtimes_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  userid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  username_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  useruuid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  work_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pinforecordid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  paccount_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  puserid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  prolename_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  premark_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  proleid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pusername_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void ProductTable::SetCachedSize(int size) const {
@@ -782,31 +719,22 @@ void ProductTable::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  productkey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  orgno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  productbatchno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  fileshash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filetype_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  batchno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  confirm_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  createtime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   lat_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   lng_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  orgid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  pichash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  picture_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  roleid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  rolename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  status_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  submittime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  transactionid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  createtime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   updatetime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uploadtimes_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  userid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  useruuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  work_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pinforecordid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  paccount_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  puserid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  prolename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  premark_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  proleid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pusername_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
@@ -823,13 +751,13 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // string productkey = 1;
+      // string orgNo = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_productkey();
+        object = msg->mutable_orgno();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -839,13 +767,13 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string account = 2;
+      // string productBatchNo = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_account();
+        object = msg->mutable_productbatchno();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -855,9 +783,41 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string address = 3;
+      // string filesHash = 3;
       case 3: {
         if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName(nullptr);
+        object = msg->mutable_fileshash();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string fileType = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName(nullptr);
+        object = msg->mutable_filetype();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string address = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -871,89 +831,9 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string batchNo = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_batchno();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string confirm = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_confirm();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string createTime = 6;
+      // string lat = 6;
       case 6: {
         if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_createtime();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string id = 7;
-      case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_id();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string key = 8;
-      case 8: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_key();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string lat = 9;
-      case 9: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -967,9 +847,9 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string lng = 10;
-      case 10: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+      // string lng = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -983,13 +863,13 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string orgId = 11;
-      case 11: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+      // string createTime = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_orgid();
+        object = msg->mutable_createtime();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -999,137 +879,9 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string picHash = 12;
-      case 12: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_pichash();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string picture = 13;
-      case 13: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_picture();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string roleId = 14;
-      case 14: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_roleid();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string roleName = 15;
-      case 15: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 122) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_rolename();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string status = 16;
-      case 16: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 130) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_status();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string submitTime = 17;
-      case 17: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 138) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_submittime();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string transactionId = 18;
-      case 18: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 146) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_transactionid();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string type = 19;
-      case 19: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 154) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_type();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // string updateTime = 20;
-      case 20: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 162) goto handle_unusual;
+      // string updateTime = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
@@ -1143,13 +895,13 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string uploadTimes = 21;
-      case 21: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 170) goto handle_unusual;
+      // string pinfoRecordId = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_uploadtimes();
+        object = msg->mutable_pinforecordid();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -1159,13 +911,13 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string userId = 22;
-      case 22: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 178) goto handle_unusual;
+      // string paccount = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_userid();
+        object = msg->mutable_paccount();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -1175,13 +927,13 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string userName = 23;
-      case 23: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 186) goto handle_unusual;
+      // string puserId = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_username();
+        object = msg->mutable_puserid();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -1191,13 +943,13 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string userUUID = 24;
-      case 24: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 194) goto handle_unusual;
+      // string proleName = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_useruuid();
+        object = msg->mutable_prolename();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -1207,13 +959,45 @@ const char* ProductTable::_InternalParse(const char* begin, const char* end, voi
         ptr += size;
         break;
       }
-      // string work = 25;
-      case 25: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 202) goto handle_unusual;
+      // string premark = 14;
+      case 14: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
         ptr = ::google::protobuf::io::ReadSize(ptr, &size);
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         ctx->extra_parse_data().SetFieldName(nullptr);
-        object = msg->mutable_work();
+        object = msg->mutable_premark();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string proleId = 15;
+      case 15: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 122) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName(nullptr);
+        object = msg->mutable_proleid();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string puserName = 16;
+      case 16: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 130) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName(nullptr);
+        object = msg->mutable_pusername();
         if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
           parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
           goto string_till_end;
@@ -1263,39 +1047,69 @@ bool ProductTable::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string productkey = 1;
+      // string orgNo = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_productkey()));
+                input, this->mutable_orgno()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->productkey().data(), static_cast<int>(this->productkey().length()),
+            this->orgno().data(), static_cast<int>(this->orgno().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.productkey"));
+            "Traceability.ProductTable.orgNo"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string account = 2;
+      // string productBatchNo = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_account()));
+                input, this->mutable_productbatchno()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->account().data(), static_cast<int>(this->account().length()),
+            this->productbatchno().data(), static_cast<int>(this->productbatchno().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.account"));
+            "Traceability.ProductTable.productBatchNo"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string address = 3;
+      // string filesHash = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_fileshash()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->fileshash().data(), static_cast<int>(this->fileshash().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "Traceability.ProductTable.filesHash"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string fileType = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filetype()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filetype().data(), static_cast<int>(this->filetype().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "Traceability.ProductTable.fileType"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string address = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_address()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1308,84 +1122,9 @@ bool ProductTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string batchNo = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_batchno()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->batchno().data(), static_cast<int>(this->batchno().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.batchNo"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string confirm = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_confirm()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->confirm().data(), static_cast<int>(this->confirm().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.confirm"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string createTime = 6;
+      // string lat = 6;
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_createtime()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->createtime().data(), static_cast<int>(this->createtime().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.createTime"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string id = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->id().data(), static_cast<int>(this->id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string key = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_key()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->key().data(), static_cast<int>(this->key().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.key"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string lat = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_lat()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1398,9 +1137,9 @@ bool ProductTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string lng = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+      // string lng = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_lng()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1413,144 +1152,24 @@ bool ProductTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string orgId = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+      // string createTime = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_orgid()));
+                input, this->mutable_createtime()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->orgid().data(), static_cast<int>(this->orgid().length()),
+            this->createtime().data(), static_cast<int>(this->createtime().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.orgId"));
+            "Traceability.ProductTable.createTime"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string picHash = 12;
-      case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_pichash()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->pichash().data(), static_cast<int>(this->pichash().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.picHash"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string picture = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_picture()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->picture().data(), static_cast<int>(this->picture().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.picture"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string roleId = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (114 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_roleid()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->roleid().data(), static_cast<int>(this->roleid().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.roleId"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string roleName = 15;
-      case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (122 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_rolename()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->rolename().data(), static_cast<int>(this->rolename().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.roleName"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string status = 16;
-      case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (130 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_status()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->status().data(), static_cast<int>(this->status().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.status"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string submitTime = 17;
-      case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (138 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_submittime()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->submittime().data(), static_cast<int>(this->submittime().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.submitTime"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string transactionId = 18;
-      case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (146 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_transactionid()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->transactionid().data(), static_cast<int>(this->transactionid().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.transactionId"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string type = 19;
-      case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (154 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_type()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->type().data(), static_cast<int>(this->type().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.type"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string updateTime = 20;
-      case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (162 & 0xFF)) {
+      // string updateTime = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_updatetime()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1563,75 +1182,105 @@ bool ProductTable::MergePartialFromCodedStream(
         break;
       }
 
-      // string uploadTimes = 21;
-      case 21: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (170 & 0xFF)) {
+      // string pinfoRecordId = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_uploadtimes()));
+                input, this->mutable_pinforecordid()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->uploadtimes().data(), static_cast<int>(this->uploadtimes().length()),
+            this->pinforecordid().data(), static_cast<int>(this->pinforecordid().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.uploadTimes"));
+            "Traceability.ProductTable.pinfoRecordId"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string userId = 22;
-      case 22: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (178 & 0xFF)) {
+      // string paccount = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_userid()));
+                input, this->mutable_paccount()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->userid().data(), static_cast<int>(this->userid().length()),
+            this->paccount().data(), static_cast<int>(this->paccount().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.userId"));
+            "Traceability.ProductTable.paccount"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string userName = 23;
-      case 23: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (186 & 0xFF)) {
+      // string puserId = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_username()));
+                input, this->mutable_puserid()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->username().data(), static_cast<int>(this->username().length()),
+            this->puserid().data(), static_cast<int>(this->puserid().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.userName"));
+            "Traceability.ProductTable.puserId"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string userUUID = 24;
-      case 24: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (194 & 0xFF)) {
+      // string proleName = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_useruuid()));
+                input, this->mutable_prolename()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->useruuid().data(), static_cast<int>(this->useruuid().length()),
+            this->prolename().data(), static_cast<int>(this->prolename().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.userUUID"));
+            "Traceability.ProductTable.proleName"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string work = 25;
-      case 25: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (202 & 0xFF)) {
+      // string premark = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (114 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_work()));
+                input, this->mutable_premark()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->work().data(), static_cast<int>(this->work().length()),
+            this->premark().data(), static_cast<int>(this->premark().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Traceability.ProductTable.work"));
+            "Traceability.ProductTable.premark"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string proleId = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (122 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_proleid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->proleid().data(), static_cast<int>(this->proleid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "Traceability.ProductTable.proleId"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string puserName = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (130 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_pusername()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->pusername().data(), static_cast<int>(this->pusername().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "Traceability.ProductTable.puserName"));
         } else {
           goto handle_unusual;
         }
@@ -1665,254 +1314,164 @@ void ProductTable::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string productkey = 1;
-  if (this->productkey().size() > 0) {
+  // string orgNo = 1;
+  if (this->orgno().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->productkey().data(), static_cast<int>(this->productkey().length()),
+      this->orgno().data(), static_cast<int>(this->orgno().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.productkey");
+      "Traceability.ProductTable.orgNo");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->productkey(), output);
+      1, this->orgno(), output);
   }
 
-  // string account = 2;
-  if (this->account().size() > 0) {
+  // string productBatchNo = 2;
+  if (this->productbatchno().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->account().data(), static_cast<int>(this->account().length()),
+      this->productbatchno().data(), static_cast<int>(this->productbatchno().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.account");
+      "Traceability.ProductTable.productBatchNo");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->account(), output);
+      2, this->productbatchno(), output);
   }
 
-  // string address = 3;
+  // string filesHash = 3;
+  if (this->fileshash().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->fileshash().data(), static_cast<int>(this->fileshash().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Traceability.ProductTable.filesHash");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->fileshash(), output);
+  }
+
+  // string fileType = 4;
+  if (this->filetype().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filetype().data(), static_cast<int>(this->filetype().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Traceability.ProductTable.fileType");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->filetype(), output);
+  }
+
+  // string address = 5;
   if (this->address().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->address().data(), static_cast<int>(this->address().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.ProductTable.address");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->address(), output);
+      5, this->address(), output);
   }
 
-  // string batchNo = 4;
-  if (this->batchno().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->batchno().data(), static_cast<int>(this->batchno().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.batchNo");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->batchno(), output);
-  }
-
-  // string confirm = 5;
-  if (this->confirm().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->confirm().data(), static_cast<int>(this->confirm().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.confirm");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->confirm(), output);
-  }
-
-  // string createTime = 6;
-  if (this->createtime().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->createtime().data(), static_cast<int>(this->createtime().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.createTime");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->createtime(), output);
-  }
-
-  // string id = 7;
-  if (this->id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.id");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->id(), output);
-  }
-
-  // string key = 8;
-  if (this->key().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->key().data(), static_cast<int>(this->key().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.key");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->key(), output);
-  }
-
-  // string lat = 9;
+  // string lat = 6;
   if (this->lat().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->lat().data(), static_cast<int>(this->lat().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.ProductTable.lat");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->lat(), output);
+      6, this->lat(), output);
   }
 
-  // string lng = 10;
+  // string lng = 7;
   if (this->lng().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->lng().data(), static_cast<int>(this->lng().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.ProductTable.lng");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      10, this->lng(), output);
+      7, this->lng(), output);
   }
 
-  // string orgId = 11;
-  if (this->orgid().size() > 0) {
+  // string createTime = 8;
+  if (this->createtime().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->orgid().data(), static_cast<int>(this->orgid().length()),
+      this->createtime().data(), static_cast<int>(this->createtime().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.orgId");
+      "Traceability.ProductTable.createTime");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      11, this->orgid(), output);
+      8, this->createtime(), output);
   }
 
-  // string picHash = 12;
-  if (this->pichash().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->pichash().data(), static_cast<int>(this->pichash().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.picHash");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      12, this->pichash(), output);
-  }
-
-  // string picture = 13;
-  if (this->picture().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->picture().data(), static_cast<int>(this->picture().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.picture");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      13, this->picture(), output);
-  }
-
-  // string roleId = 14;
-  if (this->roleid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->roleid().data(), static_cast<int>(this->roleid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.roleId");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      14, this->roleid(), output);
-  }
-
-  // string roleName = 15;
-  if (this->rolename().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->rolename().data(), static_cast<int>(this->rolename().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.roleName");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      15, this->rolename(), output);
-  }
-
-  // string status = 16;
-  if (this->status().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->status().data(), static_cast<int>(this->status().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.status");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      16, this->status(), output);
-  }
-
-  // string submitTime = 17;
-  if (this->submittime().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->submittime().data(), static_cast<int>(this->submittime().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.submitTime");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      17, this->submittime(), output);
-  }
-
-  // string transactionId = 18;
-  if (this->transactionid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->transactionid().data(), static_cast<int>(this->transactionid().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.transactionId");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      18, this->transactionid(), output);
-  }
-
-  // string type = 19;
-  if (this->type().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->type().data(), static_cast<int>(this->type().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.type");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      19, this->type(), output);
-  }
-
-  // string updateTime = 20;
+  // string updateTime = 9;
   if (this->updatetime().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->updatetime().data(), static_cast<int>(this->updatetime().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Traceability.ProductTable.updateTime");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      20, this->updatetime(), output);
+      9, this->updatetime(), output);
   }
 
-  // string uploadTimes = 21;
-  if (this->uploadtimes().size() > 0) {
+  // string pinfoRecordId = 10;
+  if (this->pinforecordid().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->uploadtimes().data(), static_cast<int>(this->uploadtimes().length()),
+      this->pinforecordid().data(), static_cast<int>(this->pinforecordid().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.uploadTimes");
+      "Traceability.ProductTable.pinfoRecordId");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      21, this->uploadtimes(), output);
+      10, this->pinforecordid(), output);
   }
 
-  // string userId = 22;
-  if (this->userid().size() > 0) {
+  // string paccount = 11;
+  if (this->paccount().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->userid().data(), static_cast<int>(this->userid().length()),
+      this->paccount().data(), static_cast<int>(this->paccount().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.userId");
+      "Traceability.ProductTable.paccount");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      22, this->userid(), output);
+      11, this->paccount(), output);
   }
 
-  // string userName = 23;
-  if (this->username().size() > 0) {
+  // string puserId = 12;
+  if (this->puserid().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->username().data(), static_cast<int>(this->username().length()),
+      this->puserid().data(), static_cast<int>(this->puserid().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.userName");
+      "Traceability.ProductTable.puserId");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      23, this->username(), output);
+      12, this->puserid(), output);
   }
 
-  // string userUUID = 24;
-  if (this->useruuid().size() > 0) {
+  // string proleName = 13;
+  if (this->prolename().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->useruuid().data(), static_cast<int>(this->useruuid().length()),
+      this->prolename().data(), static_cast<int>(this->prolename().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.userUUID");
+      "Traceability.ProductTable.proleName");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      24, this->useruuid(), output);
+      13, this->prolename(), output);
   }
 
-  // string work = 25;
-  if (this->work().size() > 0) {
+  // string premark = 14;
+  if (this->premark().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->work().data(), static_cast<int>(this->work().length()),
+      this->premark().data(), static_cast<int>(this->premark().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Traceability.ProductTable.work");
+      "Traceability.ProductTable.premark");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      25, this->work(), output);
+      14, this->premark(), output);
+  }
+
+  // string proleId = 15;
+  if (this->proleid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->proleid().data(), static_cast<int>(this->proleid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Traceability.ProductTable.proleId");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      15, this->proleid(), output);
+  }
+
+  // string puserName = 16;
+  if (this->pusername().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->pusername().data(), static_cast<int>(this->pusername().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Traceability.ProductTable.puserName");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      16, this->pusername(), output);
   }
 
   output->WriteRaw(_internal_metadata_.unknown_fields().data(),
@@ -1930,179 +1489,116 @@ size_t ProductTable::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string productkey = 1;
-  if (this->productkey().size() > 0) {
+  // string orgNo = 1;
+  if (this->orgno().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->productkey());
+        this->orgno());
   }
 
-  // string account = 2;
-  if (this->account().size() > 0) {
+  // string productBatchNo = 2;
+  if (this->productbatchno().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->account());
+        this->productbatchno());
   }
 
-  // string address = 3;
+  // string filesHash = 3;
+  if (this->fileshash().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->fileshash());
+  }
+
+  // string fileType = 4;
+  if (this->filetype().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filetype());
+  }
+
+  // string address = 5;
   if (this->address().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->address());
   }
 
-  // string batchNo = 4;
-  if (this->batchno().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->batchno());
-  }
-
-  // string confirm = 5;
-  if (this->confirm().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->confirm());
-  }
-
-  // string createTime = 6;
-  if (this->createtime().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->createtime());
-  }
-
-  // string id = 7;
-  if (this->id().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->id());
-  }
-
-  // string key = 8;
-  if (this->key().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->key());
-  }
-
-  // string lat = 9;
+  // string lat = 6;
   if (this->lat().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->lat());
   }
 
-  // string lng = 10;
+  // string lng = 7;
   if (this->lng().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->lng());
   }
 
-  // string orgId = 11;
-  if (this->orgid().size() > 0) {
+  // string createTime = 8;
+  if (this->createtime().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->orgid());
+        this->createtime());
   }
 
-  // string picHash = 12;
-  if (this->pichash().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->pichash());
-  }
-
-  // string picture = 13;
-  if (this->picture().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->picture());
-  }
-
-  // string roleId = 14;
-  if (this->roleid().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->roleid());
-  }
-
-  // string roleName = 15;
-  if (this->rolename().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->rolename());
-  }
-
-  // string status = 16;
-  if (this->status().size() > 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->status());
-  }
-
-  // string submitTime = 17;
-  if (this->submittime().size() > 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->submittime());
-  }
-
-  // string transactionId = 18;
-  if (this->transactionid().size() > 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->transactionid());
-  }
-
-  // string type = 19;
-  if (this->type().size() > 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->type());
-  }
-
-  // string updateTime = 20;
+  // string updateTime = 9;
   if (this->updatetime().size() > 0) {
-    total_size += 2 +
+    total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->updatetime());
   }
 
-  // string uploadTimes = 21;
-  if (this->uploadtimes().size() > 0) {
-    total_size += 2 +
+  // string pinfoRecordId = 10;
+  if (this->pinforecordid().size() > 0) {
+    total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->uploadtimes());
+        this->pinforecordid());
   }
 
-  // string userId = 22;
-  if (this->userid().size() > 0) {
-    total_size += 2 +
+  // string paccount = 11;
+  if (this->paccount().size() > 0) {
+    total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->userid());
+        this->paccount());
   }
 
-  // string userName = 23;
-  if (this->username().size() > 0) {
-    total_size += 2 +
+  // string puserId = 12;
+  if (this->puserid().size() > 0) {
+    total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->username());
+        this->puserid());
   }
 
-  // string userUUID = 24;
-  if (this->useruuid().size() > 0) {
-    total_size += 2 +
+  // string proleName = 13;
+  if (this->prolename().size() > 0) {
+    total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->useruuid());
+        this->prolename());
   }
 
-  // string work = 25;
-  if (this->work().size() > 0) {
+  // string premark = 14;
+  if (this->premark().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->premark());
+  }
+
+  // string proleId = 15;
+  if (this->proleid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->proleid());
+  }
+
+  // string puserName = 16;
+  if (this->pusername().size() > 0) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->work());
+        this->pusername());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2122,37 +1618,25 @@ void ProductTable::MergeFrom(const ProductTable& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.productkey().size() > 0) {
+  if (from.orgno().size() > 0) {
 
-    productkey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.productkey_);
+    orgno_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.orgno_);
   }
-  if (from.account().size() > 0) {
+  if (from.productbatchno().size() > 0) {
 
-    account_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.account_);
+    productbatchno_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.productbatchno_);
+  }
+  if (from.fileshash().size() > 0) {
+
+    fileshash_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.fileshash_);
+  }
+  if (from.filetype().size() > 0) {
+
+    filetype_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filetype_);
   }
   if (from.address().size() > 0) {
 
     address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.address_);
-  }
-  if (from.batchno().size() > 0) {
-
-    batchno_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.batchno_);
-  }
-  if (from.confirm().size() > 0) {
-
-    confirm_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.confirm_);
-  }
-  if (from.createtime().size() > 0) {
-
-    createtime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.createtime_);
-  }
-  if (from.id().size() > 0) {
-
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-  if (from.key().size() > 0) {
-
-    key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.key_);
   }
   if (from.lat().size() > 0) {
 
@@ -2162,65 +1646,41 @@ void ProductTable::MergeFrom(const ProductTable& from) {
 
     lng_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lng_);
   }
-  if (from.orgid().size() > 0) {
+  if (from.createtime().size() > 0) {
 
-    orgid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.orgid_);
-  }
-  if (from.pichash().size() > 0) {
-
-    pichash_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pichash_);
-  }
-  if (from.picture().size() > 0) {
-
-    picture_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.picture_);
-  }
-  if (from.roleid().size() > 0) {
-
-    roleid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.roleid_);
-  }
-  if (from.rolename().size() > 0) {
-
-    rolename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.rolename_);
-  }
-  if (from.status().size() > 0) {
-
-    status_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.status_);
-  }
-  if (from.submittime().size() > 0) {
-
-    submittime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.submittime_);
-  }
-  if (from.transactionid().size() > 0) {
-
-    transactionid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.transactionid_);
-  }
-  if (from.type().size() > 0) {
-
-    type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.type_);
+    createtime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.createtime_);
   }
   if (from.updatetime().size() > 0) {
 
     updatetime_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.updatetime_);
   }
-  if (from.uploadtimes().size() > 0) {
+  if (from.pinforecordid().size() > 0) {
 
-    uploadtimes_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uploadtimes_);
+    pinforecordid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pinforecordid_);
   }
-  if (from.userid().size() > 0) {
+  if (from.paccount().size() > 0) {
 
-    userid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.userid_);
+    paccount_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.paccount_);
   }
-  if (from.username().size() > 0) {
+  if (from.puserid().size() > 0) {
 
-    username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
+    puserid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.puserid_);
   }
-  if (from.useruuid().size() > 0) {
+  if (from.prolename().size() > 0) {
 
-    useruuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.useruuid_);
+    prolename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.prolename_);
   }
-  if (from.work().size() > 0) {
+  if (from.premark().size() > 0) {
 
-    work_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.work_);
+    premark_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.premark_);
+  }
+  if (from.proleid().size() > 0) {
+
+    proleid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.proleid_);
+  }
+  if (from.pusername().size() > 0) {
+
+    pusername_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pusername_);
   }
 }
 
@@ -2242,55 +1702,37 @@ void ProductTable::Swap(ProductTable* other) {
 void ProductTable::InternalSwap(ProductTable* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  productkey_.Swap(&other->productkey_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  orgno_.Swap(&other->orgno_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  account_.Swap(&other->account_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  productbatchno_.Swap(&other->productbatchno_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  fileshash_.Swap(&other->fileshash_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  filetype_.Swap(&other->filetype_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   address_.Swap(&other->address_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  batchno_.Swap(&other->batchno_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  confirm_.Swap(&other->confirm_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  createtime_.Swap(&other->createtime_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   lat_.Swap(&other->lat_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   lng_.Swap(&other->lng_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  orgid_.Swap(&other->orgid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  pichash_.Swap(&other->pichash_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  picture_.Swap(&other->picture_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  roleid_.Swap(&other->roleid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  rolename_.Swap(&other->rolename_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  status_.Swap(&other->status_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  submittime_.Swap(&other->submittime_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  transactionid_.Swap(&other->transactionid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  type_.Swap(&other->type_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  createtime_.Swap(&other->createtime_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   updatetime_.Swap(&other->updatetime_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  uploadtimes_.Swap(&other->uploadtimes_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  pinforecordid_.Swap(&other->pinforecordid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  userid_.Swap(&other->userid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  paccount_.Swap(&other->paccount_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  username_.Swap(&other->username_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  puserid_.Swap(&other->puserid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  useruuid_.Swap(&other->useruuid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  prolename_.Swap(&other->prolename_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  work_.Swap(&other->work_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  premark_.Swap(&other->premark_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  proleid_.Swap(&other->proleid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  pusername_.Swap(&other->pusername_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
 

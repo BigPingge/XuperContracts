@@ -14,30 +14,20 @@ message IpfsTable{
 }
 
 message ProductTable{
-    string productkey      = 1; //key值唯一
-    string account         = 2;
-    string address         = 3;
-    string batchNo         = 4;
-    string confirm         = 5;
-    string createTime      = 6;
-    string id              = 7;
-    string key             = 8;
-    string lat             = 9;
-    string lng             = 10;
-    string orgId           = 11;
-    string picHash         = 12;
-    string picture         = 13;
-    string roleId          = 14;
-    string roleName        = 15;
-    string status          = 16;
-    string submitTime      = 17;
-    string transactionId   = 18;
-    string type            = 19;
-    string updateTime      = 20;
-    string uploadTimes     = 21;
-    string userId          = 22;
-    string userName        = 23;
-    string userUUID        = 24;
-    string work            = 25;
-
+    string orgNo                    = 1;
+    string productBatchNo           = 2;
+    string filesHash                = 3;
+    string fileType                 = 4;
+    string address                  = 5;
+    string lat                      = 6;
+    string lng                      = 7;
+    string createTime               = 8;
+    string updateTime               = 9;
+    string pinfoRecordId            = 10;
+    string paccount                 = 11;
+    string puserId                  = 12;
+    string proleName                = 13;
+    string premark                  = 14;
+    string proleId                  = 15;
+    string puserName                = 16;
 }

@@ -331,37 +331,65 @@ class ProductTable :
 
   // accessors -------------------------------------------------------
 
-  // string productkey = 1;
-  void clear_productkey();
-  static const int kProductkeyFieldNumber = 1;
-  const ::std::string& productkey() const;
-  void set_productkey(const ::std::string& value);
+  // string orgNo = 1;
+  void clear_orgno();
+  static const int kOrgNoFieldNumber = 1;
+  const ::std::string& orgno() const;
+  void set_orgno(const ::std::string& value);
   #if LANG_CXX11
-  void set_productkey(::std::string&& value);
+  void set_orgno(::std::string&& value);
   #endif
-  void set_productkey(const char* value);
-  void set_productkey(const char* value, size_t size);
-  ::std::string* mutable_productkey();
-  ::std::string* release_productkey();
-  void set_allocated_productkey(::std::string* productkey);
+  void set_orgno(const char* value);
+  void set_orgno(const char* value, size_t size);
+  ::std::string* mutable_orgno();
+  ::std::string* release_orgno();
+  void set_allocated_orgno(::std::string* orgno);
 
-  // string account = 2;
-  void clear_account();
-  static const int kAccountFieldNumber = 2;
-  const ::std::string& account() const;
-  void set_account(const ::std::string& value);
+  // string productBatchNo = 2;
+  void clear_productbatchno();
+  static const int kProductBatchNoFieldNumber = 2;
+  const ::std::string& productbatchno() const;
+  void set_productbatchno(const ::std::string& value);
   #if LANG_CXX11
-  void set_account(::std::string&& value);
+  void set_productbatchno(::std::string&& value);
   #endif
-  void set_account(const char* value);
-  void set_account(const char* value, size_t size);
-  ::std::string* mutable_account();
-  ::std::string* release_account();
-  void set_allocated_account(::std::string* account);
+  void set_productbatchno(const char* value);
+  void set_productbatchno(const char* value, size_t size);
+  ::std::string* mutable_productbatchno();
+  ::std::string* release_productbatchno();
+  void set_allocated_productbatchno(::std::string* productbatchno);
 
-  // string address = 3;
+  // string filesHash = 3;
+  void clear_fileshash();
+  static const int kFilesHashFieldNumber = 3;
+  const ::std::string& fileshash() const;
+  void set_fileshash(const ::std::string& value);
+  #if LANG_CXX11
+  void set_fileshash(::std::string&& value);
+  #endif
+  void set_fileshash(const char* value);
+  void set_fileshash(const char* value, size_t size);
+  ::std::string* mutable_fileshash();
+  ::std::string* release_fileshash();
+  void set_allocated_fileshash(::std::string* fileshash);
+
+  // string fileType = 4;
+  void clear_filetype();
+  static const int kFileTypeFieldNumber = 4;
+  const ::std::string& filetype() const;
+  void set_filetype(const ::std::string& value);
+  #if LANG_CXX11
+  void set_filetype(::std::string&& value);
+  #endif
+  void set_filetype(const char* value);
+  void set_filetype(const char* value, size_t size);
+  ::std::string* mutable_filetype();
+  ::std::string* release_filetype();
+  void set_allocated_filetype(::std::string* filetype);
+
+  // string address = 5;
   void clear_address();
-  static const int kAddressFieldNumber = 3;
+  static const int kAddressFieldNumber = 5;
   const ::std::string& address() const;
   void set_address(const ::std::string& value);
   #if LANG_CXX11
@@ -373,79 +401,9 @@ class ProductTable :
   ::std::string* release_address();
   void set_allocated_address(::std::string* address);
 
-  // string batchNo = 4;
-  void clear_batchno();
-  static const int kBatchNoFieldNumber = 4;
-  const ::std::string& batchno() const;
-  void set_batchno(const ::std::string& value);
-  #if LANG_CXX11
-  void set_batchno(::std::string&& value);
-  #endif
-  void set_batchno(const char* value);
-  void set_batchno(const char* value, size_t size);
-  ::std::string* mutable_batchno();
-  ::std::string* release_batchno();
-  void set_allocated_batchno(::std::string* batchno);
-
-  // string confirm = 5;
-  void clear_confirm();
-  static const int kConfirmFieldNumber = 5;
-  const ::std::string& confirm() const;
-  void set_confirm(const ::std::string& value);
-  #if LANG_CXX11
-  void set_confirm(::std::string&& value);
-  #endif
-  void set_confirm(const char* value);
-  void set_confirm(const char* value, size_t size);
-  ::std::string* mutable_confirm();
-  ::std::string* release_confirm();
-  void set_allocated_confirm(::std::string* confirm);
-
-  // string createTime = 6;
-  void clear_createtime();
-  static const int kCreateTimeFieldNumber = 6;
-  const ::std::string& createtime() const;
-  void set_createtime(const ::std::string& value);
-  #if LANG_CXX11
-  void set_createtime(::std::string&& value);
-  #endif
-  void set_createtime(const char* value);
-  void set_createtime(const char* value, size_t size);
-  ::std::string* mutable_createtime();
-  ::std::string* release_createtime();
-  void set_allocated_createtime(::std::string* createtime);
-
-  // string id = 7;
-  void clear_id();
-  static const int kIdFieldNumber = 7;
-  const ::std::string& id() const;
-  void set_id(const ::std::string& value);
-  #if LANG_CXX11
-  void set_id(::std::string&& value);
-  #endif
-  void set_id(const char* value);
-  void set_id(const char* value, size_t size);
-  ::std::string* mutable_id();
-  ::std::string* release_id();
-  void set_allocated_id(::std::string* id);
-
-  // string key = 8;
-  void clear_key();
-  static const int kKeyFieldNumber = 8;
-  const ::std::string& key() const;
-  void set_key(const ::std::string& value);
-  #if LANG_CXX11
-  void set_key(::std::string&& value);
-  #endif
-  void set_key(const char* value);
-  void set_key(const char* value, size_t size);
-  ::std::string* mutable_key();
-  ::std::string* release_key();
-  void set_allocated_key(::std::string* key);
-
-  // string lat = 9;
+  // string lat = 6;
   void clear_lat();
-  static const int kLatFieldNumber = 9;
+  static const int kLatFieldNumber = 6;
   const ::std::string& lat() const;
   void set_lat(const ::std::string& value);
   #if LANG_CXX11
@@ -457,9 +415,9 @@ class ProductTable :
   ::std::string* release_lat();
   void set_allocated_lat(::std::string* lat);
 
-  // string lng = 10;
+  // string lng = 7;
   void clear_lng();
-  static const int kLngFieldNumber = 10;
+  static const int kLngFieldNumber = 7;
   const ::std::string& lng() const;
   void set_lng(const ::std::string& value);
   #if LANG_CXX11
@@ -471,135 +429,23 @@ class ProductTable :
   ::std::string* release_lng();
   void set_allocated_lng(::std::string* lng);
 
-  // string orgId = 11;
-  void clear_orgid();
-  static const int kOrgIdFieldNumber = 11;
-  const ::std::string& orgid() const;
-  void set_orgid(const ::std::string& value);
+  // string createTime = 8;
+  void clear_createtime();
+  static const int kCreateTimeFieldNumber = 8;
+  const ::std::string& createtime() const;
+  void set_createtime(const ::std::string& value);
   #if LANG_CXX11
-  void set_orgid(::std::string&& value);
+  void set_createtime(::std::string&& value);
   #endif
-  void set_orgid(const char* value);
-  void set_orgid(const char* value, size_t size);
-  ::std::string* mutable_orgid();
-  ::std::string* release_orgid();
-  void set_allocated_orgid(::std::string* orgid);
+  void set_createtime(const char* value);
+  void set_createtime(const char* value, size_t size);
+  ::std::string* mutable_createtime();
+  ::std::string* release_createtime();
+  void set_allocated_createtime(::std::string* createtime);
 
-  // string picHash = 12;
-  void clear_pichash();
-  static const int kPicHashFieldNumber = 12;
-  const ::std::string& pichash() const;
-  void set_pichash(const ::std::string& value);
-  #if LANG_CXX11
-  void set_pichash(::std::string&& value);
-  #endif
-  void set_pichash(const char* value);
-  void set_pichash(const char* value, size_t size);
-  ::std::string* mutable_pichash();
-  ::std::string* release_pichash();
-  void set_allocated_pichash(::std::string* pichash);
-
-  // string picture = 13;
-  void clear_picture();
-  static const int kPictureFieldNumber = 13;
-  const ::std::string& picture() const;
-  void set_picture(const ::std::string& value);
-  #if LANG_CXX11
-  void set_picture(::std::string&& value);
-  #endif
-  void set_picture(const char* value);
-  void set_picture(const char* value, size_t size);
-  ::std::string* mutable_picture();
-  ::std::string* release_picture();
-  void set_allocated_picture(::std::string* picture);
-
-  // string roleId = 14;
-  void clear_roleid();
-  static const int kRoleIdFieldNumber = 14;
-  const ::std::string& roleid() const;
-  void set_roleid(const ::std::string& value);
-  #if LANG_CXX11
-  void set_roleid(::std::string&& value);
-  #endif
-  void set_roleid(const char* value);
-  void set_roleid(const char* value, size_t size);
-  ::std::string* mutable_roleid();
-  ::std::string* release_roleid();
-  void set_allocated_roleid(::std::string* roleid);
-
-  // string roleName = 15;
-  void clear_rolename();
-  static const int kRoleNameFieldNumber = 15;
-  const ::std::string& rolename() const;
-  void set_rolename(const ::std::string& value);
-  #if LANG_CXX11
-  void set_rolename(::std::string&& value);
-  #endif
-  void set_rolename(const char* value);
-  void set_rolename(const char* value, size_t size);
-  ::std::string* mutable_rolename();
-  ::std::string* release_rolename();
-  void set_allocated_rolename(::std::string* rolename);
-
-  // string status = 16;
-  void clear_status();
-  static const int kStatusFieldNumber = 16;
-  const ::std::string& status() const;
-  void set_status(const ::std::string& value);
-  #if LANG_CXX11
-  void set_status(::std::string&& value);
-  #endif
-  void set_status(const char* value);
-  void set_status(const char* value, size_t size);
-  ::std::string* mutable_status();
-  ::std::string* release_status();
-  void set_allocated_status(::std::string* status);
-
-  // string submitTime = 17;
-  void clear_submittime();
-  static const int kSubmitTimeFieldNumber = 17;
-  const ::std::string& submittime() const;
-  void set_submittime(const ::std::string& value);
-  #if LANG_CXX11
-  void set_submittime(::std::string&& value);
-  #endif
-  void set_submittime(const char* value);
-  void set_submittime(const char* value, size_t size);
-  ::std::string* mutable_submittime();
-  ::std::string* release_submittime();
-  void set_allocated_submittime(::std::string* submittime);
-
-  // string transactionId = 18;
-  void clear_transactionid();
-  static const int kTransactionIdFieldNumber = 18;
-  const ::std::string& transactionid() const;
-  void set_transactionid(const ::std::string& value);
-  #if LANG_CXX11
-  void set_transactionid(::std::string&& value);
-  #endif
-  void set_transactionid(const char* value);
-  void set_transactionid(const char* value, size_t size);
-  ::std::string* mutable_transactionid();
-  ::std::string* release_transactionid();
-  void set_allocated_transactionid(::std::string* transactionid);
-
-  // string type = 19;
-  void clear_type();
-  static const int kTypeFieldNumber = 19;
-  const ::std::string& type() const;
-  void set_type(const ::std::string& value);
-  #if LANG_CXX11
-  void set_type(::std::string&& value);
-  #endif
-  void set_type(const char* value);
-  void set_type(const char* value, size_t size);
-  ::std::string* mutable_type();
-  ::std::string* release_type();
-  void set_allocated_type(::std::string* type);
-
-  // string updateTime = 20;
+  // string updateTime = 9;
   void clear_updatetime();
-  static const int kUpdateTimeFieldNumber = 20;
+  static const int kUpdateTimeFieldNumber = 9;
   const ::std::string& updatetime() const;
   void set_updatetime(const ::std::string& value);
   #if LANG_CXX11
@@ -611,106 +457,125 @@ class ProductTable :
   ::std::string* release_updatetime();
   void set_allocated_updatetime(::std::string* updatetime);
 
-  // string uploadTimes = 21;
-  void clear_uploadtimes();
-  static const int kUploadTimesFieldNumber = 21;
-  const ::std::string& uploadtimes() const;
-  void set_uploadtimes(const ::std::string& value);
+  // string pinfoRecordId = 10;
+  void clear_pinforecordid();
+  static const int kPinfoRecordIdFieldNumber = 10;
+  const ::std::string& pinforecordid() const;
+  void set_pinforecordid(const ::std::string& value);
   #if LANG_CXX11
-  void set_uploadtimes(::std::string&& value);
+  void set_pinforecordid(::std::string&& value);
   #endif
-  void set_uploadtimes(const char* value);
-  void set_uploadtimes(const char* value, size_t size);
-  ::std::string* mutable_uploadtimes();
-  ::std::string* release_uploadtimes();
-  void set_allocated_uploadtimes(::std::string* uploadtimes);
+  void set_pinforecordid(const char* value);
+  void set_pinforecordid(const char* value, size_t size);
+  ::std::string* mutable_pinforecordid();
+  ::std::string* release_pinforecordid();
+  void set_allocated_pinforecordid(::std::string* pinforecordid);
 
-  // string userId = 22;
-  void clear_userid();
-  static const int kUserIdFieldNumber = 22;
-  const ::std::string& userid() const;
-  void set_userid(const ::std::string& value);
+  // string paccount = 11;
+  void clear_paccount();
+  static const int kPaccountFieldNumber = 11;
+  const ::std::string& paccount() const;
+  void set_paccount(const ::std::string& value);
   #if LANG_CXX11
-  void set_userid(::std::string&& value);
+  void set_paccount(::std::string&& value);
   #endif
-  void set_userid(const char* value);
-  void set_userid(const char* value, size_t size);
-  ::std::string* mutable_userid();
-  ::std::string* release_userid();
-  void set_allocated_userid(::std::string* userid);
+  void set_paccount(const char* value);
+  void set_paccount(const char* value, size_t size);
+  ::std::string* mutable_paccount();
+  ::std::string* release_paccount();
+  void set_allocated_paccount(::std::string* paccount);
 
-  // string userName = 23;
-  void clear_username();
-  static const int kUserNameFieldNumber = 23;
-  const ::std::string& username() const;
-  void set_username(const ::std::string& value);
+  // string puserId = 12;
+  void clear_puserid();
+  static const int kPuserIdFieldNumber = 12;
+  const ::std::string& puserid() const;
+  void set_puserid(const ::std::string& value);
   #if LANG_CXX11
-  void set_username(::std::string&& value);
+  void set_puserid(::std::string&& value);
   #endif
-  void set_username(const char* value);
-  void set_username(const char* value, size_t size);
-  ::std::string* mutable_username();
-  ::std::string* release_username();
-  void set_allocated_username(::std::string* username);
+  void set_puserid(const char* value);
+  void set_puserid(const char* value, size_t size);
+  ::std::string* mutable_puserid();
+  ::std::string* release_puserid();
+  void set_allocated_puserid(::std::string* puserid);
 
-  // string userUUID = 24;
-  void clear_useruuid();
-  static const int kUserUUIDFieldNumber = 24;
-  const ::std::string& useruuid() const;
-  void set_useruuid(const ::std::string& value);
+  // string proleName = 13;
+  void clear_prolename();
+  static const int kProleNameFieldNumber = 13;
+  const ::std::string& prolename() const;
+  void set_prolename(const ::std::string& value);
   #if LANG_CXX11
-  void set_useruuid(::std::string&& value);
+  void set_prolename(::std::string&& value);
   #endif
-  void set_useruuid(const char* value);
-  void set_useruuid(const char* value, size_t size);
-  ::std::string* mutable_useruuid();
-  ::std::string* release_useruuid();
-  void set_allocated_useruuid(::std::string* useruuid);
+  void set_prolename(const char* value);
+  void set_prolename(const char* value, size_t size);
+  ::std::string* mutable_prolename();
+  ::std::string* release_prolename();
+  void set_allocated_prolename(::std::string* prolename);
 
-  // string work = 25;
-  void clear_work();
-  static const int kWorkFieldNumber = 25;
-  const ::std::string& work() const;
-  void set_work(const ::std::string& value);
+  // string premark = 14;
+  void clear_premark();
+  static const int kPremarkFieldNumber = 14;
+  const ::std::string& premark() const;
+  void set_premark(const ::std::string& value);
   #if LANG_CXX11
-  void set_work(::std::string&& value);
+  void set_premark(::std::string&& value);
   #endif
-  void set_work(const char* value);
-  void set_work(const char* value, size_t size);
-  ::std::string* mutable_work();
-  ::std::string* release_work();
-  void set_allocated_work(::std::string* work);
+  void set_premark(const char* value);
+  void set_premark(const char* value, size_t size);
+  ::std::string* mutable_premark();
+  ::std::string* release_premark();
+  void set_allocated_premark(::std::string* premark);
+
+  // string proleId = 15;
+  void clear_proleid();
+  static const int kProleIdFieldNumber = 15;
+  const ::std::string& proleid() const;
+  void set_proleid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_proleid(::std::string&& value);
+  #endif
+  void set_proleid(const char* value);
+  void set_proleid(const char* value, size_t size);
+  ::std::string* mutable_proleid();
+  ::std::string* release_proleid();
+  void set_allocated_proleid(::std::string* proleid);
+
+  // string puserName = 16;
+  void clear_pusername();
+  static const int kPuserNameFieldNumber = 16;
+  const ::std::string& pusername() const;
+  void set_pusername(const ::std::string& value);
+  #if LANG_CXX11
+  void set_pusername(::std::string&& value);
+  #endif
+  void set_pusername(const char* value);
+  void set_pusername(const char* value, size_t size);
+  ::std::string* mutable_pusername();
+  ::std::string* release_pusername();
+  void set_allocated_pusername(::std::string* pusername);
 
   // @@protoc_insertion_point(class_scope:Traceability.ProductTable)
  private:
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArenaLite _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr productkey_;
-  ::google::protobuf::internal::ArenaStringPtr account_;
+  ::google::protobuf::internal::ArenaStringPtr orgno_;
+  ::google::protobuf::internal::ArenaStringPtr productbatchno_;
+  ::google::protobuf::internal::ArenaStringPtr fileshash_;
+  ::google::protobuf::internal::ArenaStringPtr filetype_;
   ::google::protobuf::internal::ArenaStringPtr address_;
-  ::google::protobuf::internal::ArenaStringPtr batchno_;
-  ::google::protobuf::internal::ArenaStringPtr confirm_;
-  ::google::protobuf::internal::ArenaStringPtr createtime_;
-  ::google::protobuf::internal::ArenaStringPtr id_;
-  ::google::protobuf::internal::ArenaStringPtr key_;
   ::google::protobuf::internal::ArenaStringPtr lat_;
   ::google::protobuf::internal::ArenaStringPtr lng_;
-  ::google::protobuf::internal::ArenaStringPtr orgid_;
-  ::google::protobuf::internal::ArenaStringPtr pichash_;
-  ::google::protobuf::internal::ArenaStringPtr picture_;
-  ::google::protobuf::internal::ArenaStringPtr roleid_;
-  ::google::protobuf::internal::ArenaStringPtr rolename_;
-  ::google::protobuf::internal::ArenaStringPtr status_;
-  ::google::protobuf::internal::ArenaStringPtr submittime_;
-  ::google::protobuf::internal::ArenaStringPtr transactionid_;
-  ::google::protobuf::internal::ArenaStringPtr type_;
+  ::google::protobuf::internal::ArenaStringPtr createtime_;
   ::google::protobuf::internal::ArenaStringPtr updatetime_;
-  ::google::protobuf::internal::ArenaStringPtr uploadtimes_;
-  ::google::protobuf::internal::ArenaStringPtr userid_;
-  ::google::protobuf::internal::ArenaStringPtr username_;
-  ::google::protobuf::internal::ArenaStringPtr useruuid_;
-  ::google::protobuf::internal::ArenaStringPtr work_;
+  ::google::protobuf::internal::ArenaStringPtr pinforecordid_;
+  ::google::protobuf::internal::ArenaStringPtr paccount_;
+  ::google::protobuf::internal::ArenaStringPtr puserid_;
+  ::google::protobuf::internal::ArenaStringPtr prolename_;
+  ::google::protobuf::internal::ArenaStringPtr premark_;
+  ::google::protobuf::internal::ArenaStringPtr proleid_;
+  ::google::protobuf::internal::ArenaStringPtr pusername_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Traceability_2eproto;
 };
@@ -994,113 +859,219 @@ inline void IpfsTable::set_allocated_submittime(::std::string* submittime) {
 
 // ProductTable
 
-// string productkey = 1;
-inline void ProductTable::clear_productkey() {
-  productkey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string orgNo = 1;
+inline void ProductTable::clear_orgno() {
+  orgno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::productkey() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.productkey)
-  return productkey_.GetNoArena();
+inline const ::std::string& ProductTable::orgno() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.orgNo)
+  return orgno_.GetNoArena();
 }
-inline void ProductTable::set_productkey(const ::std::string& value) {
+inline void ProductTable::set_orgno(const ::std::string& value) {
   
-  productkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.productkey)
+  orgno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.orgNo)
 }
 #if LANG_CXX11
-inline void ProductTable::set_productkey(::std::string&& value) {
+inline void ProductTable::set_orgno(::std::string&& value) {
   
-  productkey_.SetNoArena(
+  orgno_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.productkey)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.orgNo)
 }
 #endif
-inline void ProductTable::set_productkey(const char* value) {
+inline void ProductTable::set_orgno(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  productkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.productkey)
+  orgno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.orgNo)
 }
-inline void ProductTable::set_productkey(const char* value, size_t size) {
+inline void ProductTable::set_orgno(const char* value, size_t size) {
   
-  productkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  orgno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.productkey)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.orgNo)
 }
-inline ::std::string* ProductTable::mutable_productkey() {
+inline ::std::string* ProductTable::mutable_orgno() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.productkey)
-  return productkey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.orgNo)
+  return orgno_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_productkey() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.productkey)
+inline ::std::string* ProductTable::release_orgno() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.orgNo)
   
-  return productkey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return orgno_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_productkey(::std::string* productkey) {
-  if (productkey != nullptr) {
+inline void ProductTable::set_allocated_orgno(::std::string* orgno) {
+  if (orgno != nullptr) {
     
   } else {
     
   }
-  productkey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), productkey);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.productkey)
+  orgno_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), orgno);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.orgNo)
 }
 
-// string account = 2;
-inline void ProductTable::clear_account() {
-  account_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string productBatchNo = 2;
+inline void ProductTable::clear_productbatchno() {
+  productbatchno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::account() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.account)
-  return account_.GetNoArena();
+inline const ::std::string& ProductTable::productbatchno() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.productBatchNo)
+  return productbatchno_.GetNoArena();
 }
-inline void ProductTable::set_account(const ::std::string& value) {
+inline void ProductTable::set_productbatchno(const ::std::string& value) {
   
-  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.account)
+  productbatchno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.productBatchNo)
 }
 #if LANG_CXX11
-inline void ProductTable::set_account(::std::string&& value) {
+inline void ProductTable::set_productbatchno(::std::string&& value) {
   
-  account_.SetNoArena(
+  productbatchno_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.account)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.productBatchNo)
 }
 #endif
-inline void ProductTable::set_account(const char* value) {
+inline void ProductTable::set_productbatchno(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.account)
+  productbatchno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.productBatchNo)
 }
-inline void ProductTable::set_account(const char* value, size_t size) {
+inline void ProductTable::set_productbatchno(const char* value, size_t size) {
   
-  account_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  productbatchno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.account)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.productBatchNo)
 }
-inline ::std::string* ProductTable::mutable_account() {
+inline ::std::string* ProductTable::mutable_productbatchno() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.account)
-  return account_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.productBatchNo)
+  return productbatchno_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_account() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.account)
+inline ::std::string* ProductTable::release_productbatchno() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.productBatchNo)
   
-  return account_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return productbatchno_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_account(::std::string* account) {
-  if (account != nullptr) {
+inline void ProductTable::set_allocated_productbatchno(::std::string* productbatchno) {
+  if (productbatchno != nullptr) {
     
   } else {
     
   }
-  account_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), account);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.account)
+  productbatchno_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), productbatchno);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.productBatchNo)
 }
 
-// string address = 3;
+// string filesHash = 3;
+inline void ProductTable::clear_fileshash() {
+  fileshash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ProductTable::fileshash() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.filesHash)
+  return fileshash_.GetNoArena();
+}
+inline void ProductTable::set_fileshash(const ::std::string& value) {
+  
+  fileshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.filesHash)
+}
+#if LANG_CXX11
+inline void ProductTable::set_fileshash(::std::string&& value) {
+  
+  fileshash_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.filesHash)
+}
+#endif
+inline void ProductTable::set_fileshash(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  fileshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.filesHash)
+}
+inline void ProductTable::set_fileshash(const char* value, size_t size) {
+  
+  fileshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.filesHash)
+}
+inline ::std::string* ProductTable::mutable_fileshash() {
+  
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.filesHash)
+  return fileshash_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ProductTable::release_fileshash() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.filesHash)
+  
+  return fileshash_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ProductTable::set_allocated_fileshash(::std::string* fileshash) {
+  if (fileshash != nullptr) {
+    
+  } else {
+    
+  }
+  fileshash_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), fileshash);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.filesHash)
+}
+
+// string fileType = 4;
+inline void ProductTable::clear_filetype() {
+  filetype_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ProductTable::filetype() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.fileType)
+  return filetype_.GetNoArena();
+}
+inline void ProductTable::set_filetype(const ::std::string& value) {
+  
+  filetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.fileType)
+}
+#if LANG_CXX11
+inline void ProductTable::set_filetype(::std::string&& value) {
+  
+  filetype_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.fileType)
+}
+#endif
+inline void ProductTable::set_filetype(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  filetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.fileType)
+}
+inline void ProductTable::set_filetype(const char* value, size_t size) {
+  
+  filetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.fileType)
+}
+inline ::std::string* ProductTable::mutable_filetype() {
+  
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.fileType)
+  return filetype_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ProductTable::release_filetype() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.fileType)
+  
+  return filetype_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ProductTable::set_allocated_filetype(::std::string* filetype) {
+  if (filetype != nullptr) {
+    
+  } else {
+    
+  }
+  filetype_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filetype);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.fileType)
+}
+
+// string address = 5;
 inline void ProductTable::clear_address() {
   address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1153,272 +1124,7 @@ inline void ProductTable::set_allocated_address(::std::string* address) {
   // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.address)
 }
 
-// string batchNo = 4;
-inline void ProductTable::clear_batchno() {
-  batchno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::batchno() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.batchNo)
-  return batchno_.GetNoArena();
-}
-inline void ProductTable::set_batchno(const ::std::string& value) {
-  
-  batchno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.batchNo)
-}
-#if LANG_CXX11
-inline void ProductTable::set_batchno(::std::string&& value) {
-  
-  batchno_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.batchNo)
-}
-#endif
-inline void ProductTable::set_batchno(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  batchno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.batchNo)
-}
-inline void ProductTable::set_batchno(const char* value, size_t size) {
-  
-  batchno_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.batchNo)
-}
-inline ::std::string* ProductTable::mutable_batchno() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.batchNo)
-  return batchno_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_batchno() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.batchNo)
-  
-  return batchno_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_batchno(::std::string* batchno) {
-  if (batchno != nullptr) {
-    
-  } else {
-    
-  }
-  batchno_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), batchno);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.batchNo)
-}
-
-// string confirm = 5;
-inline void ProductTable::clear_confirm() {
-  confirm_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::confirm() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.confirm)
-  return confirm_.GetNoArena();
-}
-inline void ProductTable::set_confirm(const ::std::string& value) {
-  
-  confirm_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.confirm)
-}
-#if LANG_CXX11
-inline void ProductTable::set_confirm(::std::string&& value) {
-  
-  confirm_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.confirm)
-}
-#endif
-inline void ProductTable::set_confirm(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  confirm_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.confirm)
-}
-inline void ProductTable::set_confirm(const char* value, size_t size) {
-  
-  confirm_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.confirm)
-}
-inline ::std::string* ProductTable::mutable_confirm() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.confirm)
-  return confirm_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_confirm() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.confirm)
-  
-  return confirm_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_confirm(::std::string* confirm) {
-  if (confirm != nullptr) {
-    
-  } else {
-    
-  }
-  confirm_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), confirm);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.confirm)
-}
-
-// string createTime = 6;
-inline void ProductTable::clear_createtime() {
-  createtime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::createtime() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.createTime)
-  return createtime_.GetNoArena();
-}
-inline void ProductTable::set_createtime(const ::std::string& value) {
-  
-  createtime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.createTime)
-}
-#if LANG_CXX11
-inline void ProductTable::set_createtime(::std::string&& value) {
-  
-  createtime_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.createTime)
-}
-#endif
-inline void ProductTable::set_createtime(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  createtime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.createTime)
-}
-inline void ProductTable::set_createtime(const char* value, size_t size) {
-  
-  createtime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.createTime)
-}
-inline ::std::string* ProductTable::mutable_createtime() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.createTime)
-  return createtime_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_createtime() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.createTime)
-  
-  return createtime_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_createtime(::std::string* createtime) {
-  if (createtime != nullptr) {
-    
-  } else {
-    
-  }
-  createtime_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), createtime);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.createTime)
-}
-
-// string id = 7;
-inline void ProductTable::clear_id() {
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::id() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.id)
-  return id_.GetNoArena();
-}
-inline void ProductTable::set_id(const ::std::string& value) {
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.id)
-}
-#if LANG_CXX11
-inline void ProductTable::set_id(::std::string&& value) {
-  
-  id_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.id)
-}
-#endif
-inline void ProductTable::set_id(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.id)
-}
-inline void ProductTable::set_id(const char* value, size_t size) {
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.id)
-}
-inline ::std::string* ProductTable::mutable_id() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.id)
-  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_id() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.id)
-  
-  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_id(::std::string* id) {
-  if (id != nullptr) {
-    
-  } else {
-    
-  }
-  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.id)
-}
-
-// string key = 8;
-inline void ProductTable::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::key() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.key)
-  return key_.GetNoArena();
-}
-inline void ProductTable::set_key(const ::std::string& value) {
-  
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.key)
-}
-#if LANG_CXX11
-inline void ProductTable::set_key(::std::string&& value) {
-  
-  key_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.key)
-}
-#endif
-inline void ProductTable::set_key(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.key)
-}
-inline void ProductTable::set_key(const char* value, size_t size) {
-  
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.key)
-}
-inline ::std::string* ProductTable::mutable_key() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_key() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.key)
-  
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_key(::std::string* key) {
-  if (key != nullptr) {
-    
-  } else {
-    
-  }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.key)
-}
-
-// string lat = 9;
+// string lat = 6;
 inline void ProductTable::clear_lat() {
   lat_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1471,7 +1177,7 @@ inline void ProductTable::set_allocated_lat(::std::string* lat) {
   // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.lat)
 }
 
-// string lng = 10;
+// string lng = 7;
 inline void ProductTable::clear_lng() {
   lng_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1524,484 +1230,60 @@ inline void ProductTable::set_allocated_lng(::std::string* lng) {
   // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.lng)
 }
 
-// string orgId = 11;
-inline void ProductTable::clear_orgid() {
-  orgid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string createTime = 8;
+inline void ProductTable::clear_createtime() {
+  createtime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::orgid() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.orgId)
-  return orgid_.GetNoArena();
+inline const ::std::string& ProductTable::createtime() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.createTime)
+  return createtime_.GetNoArena();
 }
-inline void ProductTable::set_orgid(const ::std::string& value) {
+inline void ProductTable::set_createtime(const ::std::string& value) {
   
-  orgid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.orgId)
+  createtime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.createTime)
 }
 #if LANG_CXX11
-inline void ProductTable::set_orgid(::std::string&& value) {
+inline void ProductTable::set_createtime(::std::string&& value) {
   
-  orgid_.SetNoArena(
+  createtime_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.orgId)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.createTime)
 }
 #endif
-inline void ProductTable::set_orgid(const char* value) {
+inline void ProductTable::set_createtime(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  orgid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.orgId)
+  createtime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.createTime)
 }
-inline void ProductTable::set_orgid(const char* value, size_t size) {
+inline void ProductTable::set_createtime(const char* value, size_t size) {
   
-  orgid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  createtime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.orgId)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.createTime)
 }
-inline ::std::string* ProductTable::mutable_orgid() {
+inline ::std::string* ProductTable::mutable_createtime() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.orgId)
-  return orgid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.createTime)
+  return createtime_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_orgid() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.orgId)
+inline ::std::string* ProductTable::release_createtime() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.createTime)
   
-  return orgid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return createtime_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_orgid(::std::string* orgid) {
-  if (orgid != nullptr) {
+inline void ProductTable::set_allocated_createtime(::std::string* createtime) {
+  if (createtime != nullptr) {
     
   } else {
     
   }
-  orgid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), orgid);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.orgId)
+  createtime_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), createtime);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.createTime)
 }
 
-// string picHash = 12;
-inline void ProductTable::clear_pichash() {
-  pichash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::pichash() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.picHash)
-  return pichash_.GetNoArena();
-}
-inline void ProductTable::set_pichash(const ::std::string& value) {
-  
-  pichash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.picHash)
-}
-#if LANG_CXX11
-inline void ProductTable::set_pichash(::std::string&& value) {
-  
-  pichash_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.picHash)
-}
-#endif
-inline void ProductTable::set_pichash(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  pichash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.picHash)
-}
-inline void ProductTable::set_pichash(const char* value, size_t size) {
-  
-  pichash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.picHash)
-}
-inline ::std::string* ProductTable::mutable_pichash() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.picHash)
-  return pichash_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_pichash() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.picHash)
-  
-  return pichash_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_pichash(::std::string* pichash) {
-  if (pichash != nullptr) {
-    
-  } else {
-    
-  }
-  pichash_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pichash);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.picHash)
-}
-
-// string picture = 13;
-inline void ProductTable::clear_picture() {
-  picture_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::picture() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.picture)
-  return picture_.GetNoArena();
-}
-inline void ProductTable::set_picture(const ::std::string& value) {
-  
-  picture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.picture)
-}
-#if LANG_CXX11
-inline void ProductTable::set_picture(::std::string&& value) {
-  
-  picture_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.picture)
-}
-#endif
-inline void ProductTable::set_picture(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  picture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.picture)
-}
-inline void ProductTable::set_picture(const char* value, size_t size) {
-  
-  picture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.picture)
-}
-inline ::std::string* ProductTable::mutable_picture() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.picture)
-  return picture_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_picture() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.picture)
-  
-  return picture_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_picture(::std::string* picture) {
-  if (picture != nullptr) {
-    
-  } else {
-    
-  }
-  picture_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), picture);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.picture)
-}
-
-// string roleId = 14;
-inline void ProductTable::clear_roleid() {
-  roleid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::roleid() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.roleId)
-  return roleid_.GetNoArena();
-}
-inline void ProductTable::set_roleid(const ::std::string& value) {
-  
-  roleid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.roleId)
-}
-#if LANG_CXX11
-inline void ProductTable::set_roleid(::std::string&& value) {
-  
-  roleid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.roleId)
-}
-#endif
-inline void ProductTable::set_roleid(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  roleid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.roleId)
-}
-inline void ProductTable::set_roleid(const char* value, size_t size) {
-  
-  roleid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.roleId)
-}
-inline ::std::string* ProductTable::mutable_roleid() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.roleId)
-  return roleid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_roleid() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.roleId)
-  
-  return roleid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_roleid(::std::string* roleid) {
-  if (roleid != nullptr) {
-    
-  } else {
-    
-  }
-  roleid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), roleid);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.roleId)
-}
-
-// string roleName = 15;
-inline void ProductTable::clear_rolename() {
-  rolename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::rolename() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.roleName)
-  return rolename_.GetNoArena();
-}
-inline void ProductTable::set_rolename(const ::std::string& value) {
-  
-  rolename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.roleName)
-}
-#if LANG_CXX11
-inline void ProductTable::set_rolename(::std::string&& value) {
-  
-  rolename_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.roleName)
-}
-#endif
-inline void ProductTable::set_rolename(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  rolename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.roleName)
-}
-inline void ProductTable::set_rolename(const char* value, size_t size) {
-  
-  rolename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.roleName)
-}
-inline ::std::string* ProductTable::mutable_rolename() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.roleName)
-  return rolename_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_rolename() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.roleName)
-  
-  return rolename_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_rolename(::std::string* rolename) {
-  if (rolename != nullptr) {
-    
-  } else {
-    
-  }
-  rolename_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), rolename);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.roleName)
-}
-
-// string status = 16;
-inline void ProductTable::clear_status() {
-  status_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::status() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.status)
-  return status_.GetNoArena();
-}
-inline void ProductTable::set_status(const ::std::string& value) {
-  
-  status_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.status)
-}
-#if LANG_CXX11
-inline void ProductTable::set_status(::std::string&& value) {
-  
-  status_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.status)
-}
-#endif
-inline void ProductTable::set_status(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  status_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.status)
-}
-inline void ProductTable::set_status(const char* value, size_t size) {
-  
-  status_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.status)
-}
-inline ::std::string* ProductTable::mutable_status() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.status)
-  return status_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_status() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.status)
-  
-  return status_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_status(::std::string* status) {
-  if (status != nullptr) {
-    
-  } else {
-    
-  }
-  status_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), status);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.status)
-}
-
-// string submitTime = 17;
-inline void ProductTable::clear_submittime() {
-  submittime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::submittime() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.submitTime)
-  return submittime_.GetNoArena();
-}
-inline void ProductTable::set_submittime(const ::std::string& value) {
-  
-  submittime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.submitTime)
-}
-#if LANG_CXX11
-inline void ProductTable::set_submittime(::std::string&& value) {
-  
-  submittime_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.submitTime)
-}
-#endif
-inline void ProductTable::set_submittime(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  submittime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.submitTime)
-}
-inline void ProductTable::set_submittime(const char* value, size_t size) {
-  
-  submittime_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.submitTime)
-}
-inline ::std::string* ProductTable::mutable_submittime() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.submitTime)
-  return submittime_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_submittime() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.submitTime)
-  
-  return submittime_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_submittime(::std::string* submittime) {
-  if (submittime != nullptr) {
-    
-  } else {
-    
-  }
-  submittime_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), submittime);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.submitTime)
-}
-
-// string transactionId = 18;
-inline void ProductTable::clear_transactionid() {
-  transactionid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::transactionid() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.transactionId)
-  return transactionid_.GetNoArena();
-}
-inline void ProductTable::set_transactionid(const ::std::string& value) {
-  
-  transactionid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.transactionId)
-}
-#if LANG_CXX11
-inline void ProductTable::set_transactionid(::std::string&& value) {
-  
-  transactionid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.transactionId)
-}
-#endif
-inline void ProductTable::set_transactionid(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  transactionid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.transactionId)
-}
-inline void ProductTable::set_transactionid(const char* value, size_t size) {
-  
-  transactionid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.transactionId)
-}
-inline ::std::string* ProductTable::mutable_transactionid() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.transactionId)
-  return transactionid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_transactionid() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.transactionId)
-  
-  return transactionid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_transactionid(::std::string* transactionid) {
-  if (transactionid != nullptr) {
-    
-  } else {
-    
-  }
-  transactionid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), transactionid);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.transactionId)
-}
-
-// string type = 19;
-inline void ProductTable::clear_type() {
-  type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& ProductTable::type() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.type)
-  return type_.GetNoArena();
-}
-inline void ProductTable::set_type(const ::std::string& value) {
-  
-  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.type)
-}
-#if LANG_CXX11
-inline void ProductTable::set_type(::std::string&& value) {
-  
-  type_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.type)
-}
-#endif
-inline void ProductTable::set_type(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.type)
-}
-inline void ProductTable::set_type(const char* value, size_t size) {
-  
-  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.type)
-}
-inline ::std::string* ProductTable::mutable_type() {
-  
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.type)
-  return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* ProductTable::release_type() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.type)
-  
-  return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void ProductTable::set_allocated_type(::std::string* type) {
-  if (type != nullptr) {
-    
-  } else {
-    
-  }
-  type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.type)
-}
-
-// string updateTime = 20;
+// string updateTime = 9;
 inline void ProductTable::clear_updatetime() {
   updatetime_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2054,269 +1336,375 @@ inline void ProductTable::set_allocated_updatetime(::std::string* updatetime) {
   // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.updateTime)
 }
 
-// string uploadTimes = 21;
-inline void ProductTable::clear_uploadtimes() {
-  uploadtimes_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string pinfoRecordId = 10;
+inline void ProductTable::clear_pinforecordid() {
+  pinforecordid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::uploadtimes() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.uploadTimes)
-  return uploadtimes_.GetNoArena();
+inline const ::std::string& ProductTable::pinforecordid() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.pinfoRecordId)
+  return pinforecordid_.GetNoArena();
 }
-inline void ProductTable::set_uploadtimes(const ::std::string& value) {
+inline void ProductTable::set_pinforecordid(const ::std::string& value) {
   
-  uploadtimes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.uploadTimes)
+  pinforecordid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.pinfoRecordId)
 }
 #if LANG_CXX11
-inline void ProductTable::set_uploadtimes(::std::string&& value) {
+inline void ProductTable::set_pinforecordid(::std::string&& value) {
   
-  uploadtimes_.SetNoArena(
+  pinforecordid_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.uploadTimes)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.pinfoRecordId)
 }
 #endif
-inline void ProductTable::set_uploadtimes(const char* value) {
+inline void ProductTable::set_pinforecordid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  uploadtimes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.uploadTimes)
+  pinforecordid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.pinfoRecordId)
 }
-inline void ProductTable::set_uploadtimes(const char* value, size_t size) {
+inline void ProductTable::set_pinforecordid(const char* value, size_t size) {
   
-  uploadtimes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  pinforecordid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.uploadTimes)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.pinfoRecordId)
 }
-inline ::std::string* ProductTable::mutable_uploadtimes() {
+inline ::std::string* ProductTable::mutable_pinforecordid() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.uploadTimes)
-  return uploadtimes_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.pinfoRecordId)
+  return pinforecordid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_uploadtimes() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.uploadTimes)
+inline ::std::string* ProductTable::release_pinforecordid() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.pinfoRecordId)
   
-  return uploadtimes_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return pinforecordid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_uploadtimes(::std::string* uploadtimes) {
-  if (uploadtimes != nullptr) {
+inline void ProductTable::set_allocated_pinforecordid(::std::string* pinforecordid) {
+  if (pinforecordid != nullptr) {
     
   } else {
     
   }
-  uploadtimes_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uploadtimes);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.uploadTimes)
+  pinforecordid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pinforecordid);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.pinfoRecordId)
 }
 
-// string userId = 22;
-inline void ProductTable::clear_userid() {
-  userid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string paccount = 11;
+inline void ProductTable::clear_paccount() {
+  paccount_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::userid() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.userId)
-  return userid_.GetNoArena();
+inline const ::std::string& ProductTable::paccount() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.paccount)
+  return paccount_.GetNoArena();
 }
-inline void ProductTable::set_userid(const ::std::string& value) {
+inline void ProductTable::set_paccount(const ::std::string& value) {
   
-  userid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.userId)
+  paccount_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.paccount)
 }
 #if LANG_CXX11
-inline void ProductTable::set_userid(::std::string&& value) {
+inline void ProductTable::set_paccount(::std::string&& value) {
   
-  userid_.SetNoArena(
+  paccount_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.userId)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.paccount)
 }
 #endif
-inline void ProductTable::set_userid(const char* value) {
+inline void ProductTable::set_paccount(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  userid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.userId)
+  paccount_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.paccount)
 }
-inline void ProductTable::set_userid(const char* value, size_t size) {
+inline void ProductTable::set_paccount(const char* value, size_t size) {
   
-  userid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  paccount_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.userId)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.paccount)
 }
-inline ::std::string* ProductTable::mutable_userid() {
+inline ::std::string* ProductTable::mutable_paccount() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.userId)
-  return userid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.paccount)
+  return paccount_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_userid() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.userId)
+inline ::std::string* ProductTable::release_paccount() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.paccount)
   
-  return userid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return paccount_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_userid(::std::string* userid) {
-  if (userid != nullptr) {
+inline void ProductTable::set_allocated_paccount(::std::string* paccount) {
+  if (paccount != nullptr) {
     
   } else {
     
   }
-  userid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), userid);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.userId)
+  paccount_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), paccount);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.paccount)
 }
 
-// string userName = 23;
-inline void ProductTable::clear_username() {
-  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string puserId = 12;
+inline void ProductTable::clear_puserid() {
+  puserid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::username() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.userName)
-  return username_.GetNoArena();
+inline const ::std::string& ProductTable::puserid() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.puserId)
+  return puserid_.GetNoArena();
 }
-inline void ProductTable::set_username(const ::std::string& value) {
+inline void ProductTable::set_puserid(const ::std::string& value) {
   
-  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.userName)
+  puserid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.puserId)
 }
 #if LANG_CXX11
-inline void ProductTable::set_username(::std::string&& value) {
+inline void ProductTable::set_puserid(::std::string&& value) {
   
-  username_.SetNoArena(
+  puserid_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.userName)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.puserId)
 }
 #endif
-inline void ProductTable::set_username(const char* value) {
+inline void ProductTable::set_puserid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.userName)
+  puserid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.puserId)
 }
-inline void ProductTable::set_username(const char* value, size_t size) {
+inline void ProductTable::set_puserid(const char* value, size_t size) {
   
-  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  puserid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.userName)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.puserId)
 }
-inline ::std::string* ProductTable::mutable_username() {
+inline ::std::string* ProductTable::mutable_puserid() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.userName)
-  return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.puserId)
+  return puserid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_username() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.userName)
+inline ::std::string* ProductTable::release_puserid() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.puserId)
   
-  return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return puserid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_username(::std::string* username) {
-  if (username != nullptr) {
+inline void ProductTable::set_allocated_puserid(::std::string* puserid) {
+  if (puserid != nullptr) {
     
   } else {
     
   }
-  username_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), username);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.userName)
+  puserid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), puserid);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.puserId)
 }
 
-// string userUUID = 24;
-inline void ProductTable::clear_useruuid() {
-  useruuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string proleName = 13;
+inline void ProductTable::clear_prolename() {
+  prolename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::useruuid() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.userUUID)
-  return useruuid_.GetNoArena();
+inline const ::std::string& ProductTable::prolename() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.proleName)
+  return prolename_.GetNoArena();
 }
-inline void ProductTable::set_useruuid(const ::std::string& value) {
+inline void ProductTable::set_prolename(const ::std::string& value) {
   
-  useruuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.userUUID)
+  prolename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.proleName)
 }
 #if LANG_CXX11
-inline void ProductTable::set_useruuid(::std::string&& value) {
+inline void ProductTable::set_prolename(::std::string&& value) {
   
-  useruuid_.SetNoArena(
+  prolename_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.userUUID)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.proleName)
 }
 #endif
-inline void ProductTable::set_useruuid(const char* value) {
+inline void ProductTable::set_prolename(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  useruuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.userUUID)
+  prolename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.proleName)
 }
-inline void ProductTable::set_useruuid(const char* value, size_t size) {
+inline void ProductTable::set_prolename(const char* value, size_t size) {
   
-  useruuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  prolename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.userUUID)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.proleName)
 }
-inline ::std::string* ProductTable::mutable_useruuid() {
+inline ::std::string* ProductTable::mutable_prolename() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.userUUID)
-  return useruuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.proleName)
+  return prolename_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_useruuid() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.userUUID)
+inline ::std::string* ProductTable::release_prolename() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.proleName)
   
-  return useruuid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return prolename_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_useruuid(::std::string* useruuid) {
-  if (useruuid != nullptr) {
+inline void ProductTable::set_allocated_prolename(::std::string* prolename) {
+  if (prolename != nullptr) {
     
   } else {
     
   }
-  useruuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), useruuid);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.userUUID)
+  prolename_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), prolename);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.proleName)
 }
 
-// string work = 25;
-inline void ProductTable::clear_work() {
-  work_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string premark = 14;
+inline void ProductTable::clear_premark() {
+  premark_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& ProductTable::work() const {
-  // @@protoc_insertion_point(field_get:Traceability.ProductTable.work)
-  return work_.GetNoArena();
+inline const ::std::string& ProductTable::premark() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.premark)
+  return premark_.GetNoArena();
 }
-inline void ProductTable::set_work(const ::std::string& value) {
+inline void ProductTable::set_premark(const ::std::string& value) {
   
-  work_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Traceability.ProductTable.work)
+  premark_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.premark)
 }
 #if LANG_CXX11
-inline void ProductTable::set_work(::std::string&& value) {
+inline void ProductTable::set_premark(::std::string&& value) {
   
-  work_.SetNoArena(
+  premark_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.work)
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.premark)
 }
 #endif
-inline void ProductTable::set_work(const char* value) {
+inline void ProductTable::set_premark(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  work_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.work)
+  premark_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.premark)
 }
-inline void ProductTable::set_work(const char* value, size_t size) {
+inline void ProductTable::set_premark(const char* value, size_t size) {
   
-  work_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  premark_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.work)
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.premark)
 }
-inline ::std::string* ProductTable::mutable_work() {
+inline ::std::string* ProductTable::mutable_premark() {
   
-  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.work)
-  return work_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.premark)
+  return premark_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* ProductTable::release_work() {
-  // @@protoc_insertion_point(field_release:Traceability.ProductTable.work)
+inline ::std::string* ProductTable::release_premark() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.premark)
   
-  return work_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return premark_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void ProductTable::set_allocated_work(::std::string* work) {
-  if (work != nullptr) {
+inline void ProductTable::set_allocated_premark(::std::string* premark) {
+  if (premark != nullptr) {
     
   } else {
     
   }
-  work_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), work);
-  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.work)
+  premark_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), premark);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.premark)
+}
+
+// string proleId = 15;
+inline void ProductTable::clear_proleid() {
+  proleid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ProductTable::proleid() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.proleId)
+  return proleid_.GetNoArena();
+}
+inline void ProductTable::set_proleid(const ::std::string& value) {
+  
+  proleid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.proleId)
+}
+#if LANG_CXX11
+inline void ProductTable::set_proleid(::std::string&& value) {
+  
+  proleid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.proleId)
+}
+#endif
+inline void ProductTable::set_proleid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  proleid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.proleId)
+}
+inline void ProductTable::set_proleid(const char* value, size_t size) {
+  
+  proleid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.proleId)
+}
+inline ::std::string* ProductTable::mutable_proleid() {
+  
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.proleId)
+  return proleid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ProductTable::release_proleid() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.proleId)
+  
+  return proleid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ProductTable::set_allocated_proleid(::std::string* proleid) {
+  if (proleid != nullptr) {
+    
+  } else {
+    
+  }
+  proleid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), proleid);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.proleId)
+}
+
+// string puserName = 16;
+inline void ProductTable::clear_pusername() {
+  pusername_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ProductTable::pusername() const {
+  // @@protoc_insertion_point(field_get:Traceability.ProductTable.puserName)
+  return pusername_.GetNoArena();
+}
+inline void ProductTable::set_pusername(const ::std::string& value) {
+  
+  pusername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Traceability.ProductTable.puserName)
+}
+#if LANG_CXX11
+inline void ProductTable::set_pusername(::std::string&& value) {
+  
+  pusername_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Traceability.ProductTable.puserName)
+}
+#endif
+inline void ProductTable::set_pusername(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  pusername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Traceability.ProductTable.puserName)
+}
+inline void ProductTable::set_pusername(const char* value, size_t size) {
+  
+  pusername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Traceability.ProductTable.puserName)
+}
+inline ::std::string* ProductTable::mutable_pusername() {
+  
+  // @@protoc_insertion_point(field_mutable:Traceability.ProductTable.puserName)
+  return pusername_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ProductTable::release_pusername() {
+  // @@protoc_insertion_point(field_release:Traceability.ProductTable.puserName)
+  
+  return pusername_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ProductTable::set_allocated_pusername(::std::string* pusername) {
+  if (pusername != nullptr) {
+    
+  } else {
+    
+  }
+  pusername_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pusername);
+  // @@protoc_insertion_point(field_set_allocated:Traceability.ProductTable.puserName)
 }
 
 #ifdef __GNUC__

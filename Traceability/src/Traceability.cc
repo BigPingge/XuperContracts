@@ -26,10 +26,29 @@ bool Tracebility::is_ipfs_exit(const string & ipfskey, ipfstable & table){
     return true;
 }
 
-bool Tracebility::is_product_exit(const string& productkey, producttable & table){
-    if(!get_product_table().find({{"productkey", productkey}}, &table))
+bool Tracebility::is_product_exit(const string& orgNo,const string& productBatchNo,const string& pinfoRecordId, producttable & table){
+    if(!get_product_table().find({{"orgno", orgNo},{"productbatchno",productBatchNo},{"pinforecordid",pinfoRecordId}}, &table))
         return false;
     return true;
+}
+
+void Tracebility::find_ProductTable(const string & v1,const string & v2,const string & k1,const string & k2){
+    if(v1.empty() || v2.empty()){
+        ctx->error("some args are missing");
+        return;
+    }
+
+    auto it = get_product_table().scan({{k1,v1},{k2,v2}});
+    string ret;
+    producttable ent;
+    while(it->next()) {
+        if (!it->get(&ent)) {
+            ctx->error("product table get failure : ");
+            return;
+        }
+        ret += ent.to_string();
+    }
+    ctx->ok(ret);
 }
 
 void Tracebility::initialize(){
@@ -76,39 +95,26 @@ void Tracebility::storeIpfsInfo(){
 void Tracebility::storeProductTable(){
     xchain::Context* ctx = this->context(); 
 
-    std::string account = ctx->arg("account");
+    std::string orgNo = ctx->arg("orgNo");
+    std::string productBatchNo = ctx->arg("productBatchNo");
+    std::string filesHash = ctx->arg("filesHash");
+    std::string fileType = ctx->arg("fileType");
     std::string address = ctx->arg("address");
-    std::string batchNo = ctx->arg("batchNo");
-    std::string confirm = ctx->arg("confirm");
-    std::string createTime = ctx->arg("createTime");
-    std::string id = ctx->arg("id");
-    std::string key = ctx->arg("key");
     std::string lat = ctx->arg("lat");
     std::string lng = ctx->arg("lng");
-    std::string orgId = ctx->arg("orgId");
-    std::string picHash = ctx->arg("picHash");
-    std::string picture = ctx->arg("picture");
-    std::string roleId = ctx->arg("roleId");
-    std::string roleName = ctx->arg("roleName");
-    std::string status = ctx->arg("status");
-    std::string submitTime = ctx->arg("submitTime");
-    std::string transactionId = ctx->arg("transactionId");
-    std::string type = ctx->arg("type");
+    std::string createTime = ctx->arg("createTime");
     std::string updateTime = ctx->arg("updateTime");
-    std::string uploadTimes = ctx->arg("uploadTimes");
-    std::string userId = ctx->arg("userId");
-    std::string userName = ctx->arg("userName");
-    std::string userUUID = ctx->arg("userUUID");
-    std::string work = ctx->arg("work");
-    //这个key从客户端传
-    std::string receiveKey = ctx->arg("receiveKey");
-
-    
-
-    if(account.empty() || address.empty() || batchNo.empty() || confirm.empty() || createTime.empty() || id.empty() || key.empty()
-        || lat.empty() || lng.empty() || orgId.empty() || picHash.empty() || picture.empty() || roleId.empty() || roleName.empty()
-        || status.empty() || submitTime.empty() || transactionId.empty() || type.empty() || updateTime.empty() || uploadTimes.empty()
-        || userId.empty() || userName.empty() || userUUID.empty() || work.empty() || receiveKey.empty()
+    std::string pinfoRecordId = ctx->arg("pinfoRecordId");
+    std::string paccount = ctx->arg("paccount");
+    std::string puserId = ctx->arg("puserId");
+    std::string proleName = ctx->arg("proleName");
+    std::string premark = ctx->arg("premark");
+    std::string proleId = ctx->arg("proleId");
+    std::string puserName = ctx->arg("puserName");
+   
+    if(orgNo.empty() || productBatchNo.empty() || filesHash.empty() || fileType.empty() || address.empty() || lat.empty() || lng.empty()
+        || createTime.empty() || updateTime.empty() || pinfoRecordId.empty() || paccount.empty() || puserId.empty() || proleName.empty() || premark.empty()
+        || proleId.empty() || puserName.empty() 
         ) {
 
         ctx->error("some args are missing");
@@ -116,35 +122,26 @@ void Tracebility::storeProductTable(){
     }
 
     producttable table;
-    if (is_product_exit(receiveKey, table)){
+    if (is_product_exit(orgNo , productBatchNo, pinfoRecordId,table)){
         ctx->error("storeProductTable failed, such hash has existed already");
         return;
     }
-    table.set_productkey(receiveKey);
-    table.set_account(account);
+    table.set_orgno(orgNo);
+    table.set_productbatchno(productBatchNo);
+    table.set_fileshash(filesHash);
+    table.set_filetype(fileType);
     table.set_address(address);
-    table.set_batchno(batchNo);
-    table.set_confirm(confirm);
-    table.set_createtime(createTime);
-    table.set_id(id);
-    table.set_key(key);
     table.set_lat(lat);
     table.set_lng(lng);
-    table.set_orgid(orgId);
-    table.set_pichash(picHash);
-    table.set_picture(picture);
-    table.set_roleid(roleId);
-    table.set_rolename(roleName);
-    table.set_status(status);
-    table.set_submittime(submitTime);
-    table.set_transactionid(transactionId);
-    table.set_type(type);
+    table.set_createtime(createTime);
     table.set_updatetime(updateTime);
-    table.set_uploadtimes(uploadTimes);
-    table.set_userid(userId);
-    table.set_username(userName);
-    table.set_useruuid(userUUID);
-    table.set_work(work);
+    table.set_pinforecordid(pinfoRecordId);
+    table.set_paccount(paccount);
+    table.set_puserid(puserId);
+    table.set_prolename(proleName);
+    table.set_premark(premark);
+    table.set_proleid(proleId);
+    table.set_pusername(puserName);
 
     if(!get_product_table().put(table)){
          ctx->error("storeProductTable failed");
@@ -166,7 +163,7 @@ void Tracebility::queryIpfsInfo(){
     ipfstable table;
 
     if (!is_ipfs_exit(key, table)){
-        ctx->error("null");
+        ctx->ok("null");
         return;
     }
 
@@ -175,20 +172,51 @@ void Tracebility::queryIpfsInfo(){
 
 void Tracebility::queryProductTable(){
     xchain::Context* ctx = this->context();
-    const std::string key =  ctx->arg("key");
+    const std::string orgNo =  ctx->arg("orgNo");
+    const std::string productBatchNo =  ctx->arg("productBatchNo");
+    const std::string pinfoRecordId =  ctx->arg("pinfoRecordId");
+    const std::string mode = ctx->arg("mode");
 
-    if(ctx->arg("key").empty()){
-            ctx->error("arg(key) cannot be empty");
-        return;
-    }
+    bool flag = mode.empty() ? true : false;  //true：单一查找，false：多字段查找
+    if(flag){
+        if (orgNo.empty() || productBatchNo.empty() || pinfoRecordId.empty()){
+                ctx->error("arg cannot be empty");
+            return;
+        }
 
-    producttable table;
-    if (!is_product_exit(key, table)){
-        ctx->error("null");
-        return;
-    }
+        producttable table;
+        if (!is_product_exit(orgNo , productBatchNo, pinfoRecordId,table)){
+            ctx->ok("null");
+            return;
+        }
+        
+        ctx->ok(table.to_string());
+    }else{
+
+        if (!orgNo.empty() && !productBatchNo.empty() && !pinfoRecordId.empty()){
+                ctx->error("Please set mode value");
+            return;
+        }
+
+        int status = atoi(mode.c_str());
+        switch (status)
+        {
+        case 0:
+            find_ProductTable(orgNo,productBatchNo,"orgno","productbatchno");
+            break;
+        case 1:
+            find_ProductTable(orgNo,pinfoRecordId,"orgno","pinforecordid");
+            break;
+        case 2:
+            find_ProductTable(productBatchNo,pinfoRecordId,"productbatchno","pinforecordid");
+            break;
+        default:
+            ctx->error("The mode value must be 0, 1, 2");
+            break;
+        }
+
     
-    ctx->ok(table.to_string());
+    }
 }
 
 DEFINE_METHOD(Tracebility,initialize){

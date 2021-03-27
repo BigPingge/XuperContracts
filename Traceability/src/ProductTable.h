@@ -8,33 +8,25 @@
 using namespace std;
 
 class producttable : public Traceability :: ProductTable {
-    DEFINE_ROWKEY(productkey);  //主键
-    DEFINE_INDEX_BEGIN(25)
-        DEFINE_INDEX_ADD(0, productkey)  //主键只能find
-        DEFINE_INDEX_ADD(1, account)
-        DEFINE_INDEX_ADD(2, address)
-        DEFINE_INDEX_ADD(3, batchno)
-        DEFINE_INDEX_ADD(4, confirm)
-        DEFINE_INDEX_ADD(5, createtime)
-        DEFINE_INDEX_ADD(6, id)
-        DEFINE_INDEX_ADD(7, key)
-        DEFINE_INDEX_ADD(8, lat)
-        DEFINE_INDEX_ADD(9, lng)
-        DEFINE_INDEX_ADD(10, orgid)
-        DEFINE_INDEX_ADD(11, pichash)
-        DEFINE_INDEX_ADD(12, picture)
-        DEFINE_INDEX_ADD(13, roleid)
-        DEFINE_INDEX_ADD(14, rolename)
-        DEFINE_INDEX_ADD(15, status)
-        DEFINE_INDEX_ADD(16, submittime)
-        DEFINE_INDEX_ADD(17, transactionid)
-        DEFINE_INDEX_ADD(18, type)
-        DEFINE_INDEX_ADD(19, updatetime)
-        DEFINE_INDEX_ADD(20, uploadtimes)
-        DEFINE_INDEX_ADD(21, userid)
-        DEFINE_INDEX_ADD(22, username)
-        DEFINE_INDEX_ADD(23, useruuid)
-        DEFINE_INDEX_ADD(24, work)
+    DEFINE_ROWKEY(orgno,productbatchno,pinforecordid);  //联合主键
+    DEFINE_INDEX_BEGIN(16)
+        DEFINE_INDEX_ADD(0, orgno,productbatchno)
+        DEFINE_INDEX_ADD(1, productbatchno,pinforecordid)
+        DEFINE_INDEX_ADD(2, fileshash)
+        DEFINE_INDEX_ADD(3, filetype)
+        DEFINE_INDEX_ADD(4, address)
+        DEFINE_INDEX_ADD(5, lat)
+        DEFINE_INDEX_ADD(6, lng)
+        DEFINE_INDEX_ADD(7, createtime)
+        DEFINE_INDEX_ADD(8, updatetime)
+        DEFINE_INDEX_ADD(9, pinforecordid)
+        DEFINE_INDEX_ADD(10, paccount)
+        DEFINE_INDEX_ADD(11, puserid)
+        DEFINE_INDEX_ADD(12, prolename)
+        DEFINE_INDEX_ADD(13, premark)
+        DEFINE_INDEX_ADD(14, proleid)
+        DEFINE_INDEX_ADD(15, pusername)
+        DEFINE_INDEX_ADD(16, orgno,pinforecordid)
     DEFINE_INDEX_END();
 
 
