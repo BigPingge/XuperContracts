@@ -18,7 +18,7 @@ string producttable::to_string(){
     str += prolename() + ",";
     str += premark() + ",";
     str += proleid() + ",";
-    str += pusername() + ",";
+    str += pusername();
     str += "}";
     return str;
 }
