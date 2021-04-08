@@ -104,13 +104,13 @@ void Tracebility::storeProductTable(){
     std::string lng = ctx->arg("lng");
     std::string createTime = ctx->arg("createTime");
     std::string updateTime = ctx->arg("updateTime");
-    std::string pinfoRecordId = ctx->arg("pinfoRecordId");
-    std::string paccount = ctx->arg("paccount");
-    std::string puserId = ctx->arg("puserId");
-    std::string proleName = ctx->arg("proleName");
-    std::string premark = ctx->arg("premark");
-    std::string proleId = ctx->arg("proleId");
-    std::string puserName = ctx->arg("puserName");
+    std::string pinfoRecordId = ctx->arg("pInfoRecordId");
+    std::string paccount = ctx->arg("pAccount");
+    std::string puserId = ctx->arg("pUserId");
+    std::string proleName = ctx->arg("pRoleName");
+    std::string premark = ctx->arg("pRemark");
+    std::string proleId = ctx->arg("pRoleId");
+    std::string puserName = ctx->arg("pUserName");
    
     if(orgNo.empty() || productBatchNo.empty() || filesHash.empty() || fileType.empty() || address.empty() || lat.empty() || lng.empty()
         || createTime.empty() || updateTime.empty() || pinfoRecordId.empty() || paccount.empty() || puserId.empty() || proleName.empty() || premark.empty()
@@ -174,7 +174,7 @@ void Tracebility::queryProductTable(){
     xchain::Context* ctx = this->context();
     const std::string orgNo =  ctx->arg("orgNo");
     const std::string productBatchNo =  ctx->arg("productBatchNo");
-    const std::string pinfoRecordId =  ctx->arg("pinfoRecordId");
+    const std::string pinfoRecordId =  ctx->arg("pInfoRecordId");
     const std::string mode = ctx->arg("mode");
 
     bool flag = mode.empty() ? true : false;  //true：单一查找，false：多字段查找
