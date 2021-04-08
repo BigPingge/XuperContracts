@@ -9,7 +9,7 @@ using namespace std;
 
 class ipfstable : public Traceability :: IpfsTable {
     DEFINE_ROWKEY(ipfskey);          //主键
-    DEFINE_INDEX_BEGIN(4)
+    DEFINE_INDEX_BEGIN(5)
         DEFINE_INDEX_ADD(0, ipfskey) //主键只能find
         DEFINE_INDEX_ADD(1, orgno)
         DEFINE_INDEX_ADD(2, productbatchno)

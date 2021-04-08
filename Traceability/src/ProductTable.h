@@ -9,7 +9,7 @@ using namespace std;
 
 class producttable : public Traceability :: ProductTable {
     DEFINE_ROWKEY(orgno,productbatchno,pinforecordid);  //联合主键
-    DEFINE_INDEX_BEGIN(16)
+    DEFINE_INDEX_BEGIN(17)
         DEFINE_INDEX_ADD(0, orgno,productbatchno)
         DEFINE_INDEX_ADD(1, productbatchno,pinforecordid)
         DEFINE_INDEX_ADD(2, fileshash)
