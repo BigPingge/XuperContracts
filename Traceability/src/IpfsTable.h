@@ -3,6 +3,7 @@
 
 #include "xchain/table/types.h"
 #include "Traceability.pb.h"
+#include "xchain/json/json.h"
 
 #include <string>
 using namespace std;
@@ -18,6 +19,8 @@ class ipfstable : public Traceability :: IpfsTable {
     DEFINE_INDEX_END();
 
     string to_string();
+
+    xchain::json to_json();
 };
 
 #endif //_IPFSTABLE_H_

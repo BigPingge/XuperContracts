@@ -3,6 +3,7 @@
 
 #include "xchain/table/types.h"
 #include "Traceability.pb.h"
+#include "xchain/json/json.h"
 
 #include <string>
 using namespace std;
@@ -31,6 +32,8 @@ class producttable : public Traceability :: ProductTable {
 
 
     string to_string();
+
+    xchain::json to_json();
 };
 
 #endif //_PRODUCTTABLE_H_

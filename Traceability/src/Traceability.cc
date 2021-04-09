@@ -6,7 +6,7 @@
 #include "xchain/syscall.h"
 #include "Traceability.pb.h"
 #include "Traceability.h"
-
+#include "xchain/json/json.h"
 #include <iostream>
 using namespace std;
 
@@ -41,14 +41,16 @@ void Tracebility::find_ProductTable(const string & v1,const string & v2,const st
     auto it = get_product_table().scan({{k1,v1},{k2,v2}});
     string ret;
     producttable ent;
+    xchain::json spec_json ;
     while(it->next()) {
         if (!it->get(&ent)) {
             ctx->error("product table get failure : ");
             return;
         }
-        ret += ent.to_string();
+        //ret += ent.to_string();
+        spec_json.push_back(ent.to_json());
     }
-    ctx->ok(ret);
+    ctx->ok(spec_json.dump());
 }
 
 void Tracebility::initialize(){
@@ -167,7 +169,7 @@ void Tracebility::queryIpfsInfo(){
         return;
     }
 
-    ctx->ok(table.to_string());
+    ctx->ok(table.to_json().dump());
 }
 
 void Tracebility::queryProductTable(){
@@ -190,7 +192,7 @@ void Tracebility::queryProductTable(){
             return;
         }
         
-        ctx->ok(table.to_string());
+        ctx->ok(table.to_json().dump());
     }else{
 
         if (!orgNo.empty() && !productBatchNo.empty() && !pinfoRecordId.empty()){

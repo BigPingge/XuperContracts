@@ -10,3 +10,14 @@ string ipfstable::to_string(){
     str += "}";
     return str;
 }
+
+xchain::json ipfstable::to_json() {
+    xchain::json j = {
+        {"orgNo", orgno()},
+        {"productBatchNo", productbatchno()},
+        {"productCode", productcode()},
+        {"submitTime", submittime()},
+    };
+
+    return j;
+}
