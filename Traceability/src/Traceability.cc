@@ -32,6 +32,19 @@ bool Tracebility::is_product_exit(const string& orgNo,const string& productBatch
     return true;
 }
 
+bool Tracebility::check_string(const string& str)
+{
+    int length = str.length();
+    for(int i = 0 ; i < length ; i ++)
+    {
+        if( str[i] < '0' || str[i] > '9')
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 void Tracebility::find_ProductTable(const string & v1,const string & v2,const string & k1,const string & k2){
     if(v1.empty() || v2.empty()){
         ctx->error("some args are missing");
@@ -63,33 +76,61 @@ void Tracebility::storeIpfsInfo(){
 
     std::string orgNo = ctx->arg("orgNo");
     std::string productBatchNo = ctx->arg("productBatchNo");
-    std::string productCode = ctx->arg("productCode");
+    std::string productCode = ctx->arg("productCode");      //新版后面这个追加编号
     std::string submitTime = ctx->arg("submitTime");
+    //新增查询的数量参数
+    std::string count = ctx->arg("count");
 
-    if (orgNo.empty() || productBatchNo.empty() || productCode.empty() || submitTime.empty()) {
+    if (orgNo.empty() || productBatchNo.empty() || productCode.empty() || submitTime.empty() || count.empty()) {
         ctx->error("some args are missing");
         return;
     }
+    //填充为0的位数
+    int nfill = count.length();
+    //格式化
+    string strformat = "%.";
+    char a[5];
+    sprintf(a, "%d", nfill);
+    strformat += a;
+    strformat += "d";
 
-    /*
-    * 拼接key值
-    * key值 = IpfsTable + orgNo + productBatchNo + productCode
-    */
-    ipfstable table;
-    std::string IpfsKey = orgNo  + productBatchNo  + productCode;
-    if (is_ipfs_exit(IpfsKey, table)){
-        ctx->error("storeIpfsInfo failed, such hash has existed already");
+    if( !check_string(count) )
+    {
+        ctx->error("count args error");
         return;
     }
-    table.set_ipfskey(IpfsKey);
-    table.set_orgno(orgNo);
-    table.set_productbatchno(productBatchNo);
-    table.set_productcode(productCode);
-    table.set_submittime(submitTime);
-
-    if(!get_ipfs_table().put(table)){
-        ctx->error("storeIpfsInfo failed");
+    int leng = atoi(count.c_str());
+    if(leng <= 0 )
+    {
+        ctx->error("count must be greater than 0");
         return;
+    }
+    for(int i = 1 ; i <= leng ; i++)
+    {
+        /*
+        * 拼接key值
+        * key值 = IpfsTable + orgNo + productBatchNo + productCode
+        */
+        string str_productCode = productCode;
+        char no[10];
+        sprintf(no, strformat.c_str(), i);
+        str_productCode += no;
+        ipfstable table;
+        std::string IpfsKey = orgNo  + productBatchNo  + str_productCode;
+        if (is_ipfs_exit(IpfsKey, table)){
+            ctx->error("storeIpfsInfo failed, such hash has existed already");
+            return;
+        }
+        table.set_ipfskey(IpfsKey);
+        table.set_orgno(orgNo);
+        table.set_productbatchno(productBatchNo);
+        table.set_productcode(str_productCode);
+        table.set_submittime(submitTime);
+
+        if(!get_ipfs_table().put(table)){
+            ctx->error("storeIpfsInfo failed");
+            return;
+        }
     }
     ctx->ok("storeIpfsInfo success");
 }

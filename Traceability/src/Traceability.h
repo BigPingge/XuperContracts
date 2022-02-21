@@ -49,6 +49,7 @@ private:
     bool is_ipfs_exit(const string &, ipfstable &);
     bool is_product_exit(const string &,const string &,const string &,producttable &);
     void find_ProductTable(const string &,const string &,const string &,const string &);
+    bool check_string(const string &);
 };
 
 #endif //_TRACEABILITY_H_
